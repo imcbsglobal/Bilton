@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Made Outer";
+    src: url("../src/fonts/MADE\ Outer\ Sans\ Light\ PERSONAL\ USE.otf");
+}
+
+.boldText{
+    font-family: "Made Outer";
+}
+.homeBannerBg{
+    background: linear-gradient(0deg,rgba(252, 252, 252, 1) 0%, rgba(155, 208, 226, 1) 100%);
+}
+.smallText{
+    color: #06362E;
+}
+.scrollbar::-webkit-scrollbar{
+    display: none;
+}
