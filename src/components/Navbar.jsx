@@ -105,9 +105,11 @@ const Navbar = () => {
                 Gallery
               </li>
             </a>
-            <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
-              Room
-            </li>
+            <a href="/room">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
+                Room
+              </li>
+            </a>
             <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
               Contact Us
             </li>

@@ -30,7 +30,7 @@ const MobileNavbar = ({openMenu, setOpenMenu}) => {
                 Gallery
               </li>
             </a>
-            <a href="" onClick={() => setOpenMenu(!openMenu)}>
+            <a href="/room" onClick={() => setOpenMenu(!openMenu)}>
               <li className="font-medium">
                 Room
               </li>
