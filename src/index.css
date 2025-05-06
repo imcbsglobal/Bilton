@@ -17,3 +17,33 @@
 .scrollbar::-webkit-scrollbar{
     display: none;
 }
+/* CurvedSlider.css */
+
+.curved-slider-container {
+    position: relative;
+    background: #ffffff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .curved-mask {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    background: #ffffff;
+  }
+  
+  .top-mask {
+    top: 0;
+    border-bottom-left-radius: 100% 100px;
+    border-bottom-right-radius: 100% 100px;
+  }
+  
+  .bottom-mask {
+    bottom: 0;
+    border-top-left-radius: 100% 100px;
+    border-top-right-radius: 100% 100px;
+  }
+  
