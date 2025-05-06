@@ -34,17 +34,17 @@ const Home = () => {
           <div className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E]">
             Where Serenity Meets <span className="block">Luxury</span>
           </div>
-          <div className="hidden lg:block text-sm text-center max-w-[700px] mx-auto smallText">
+          <div className="block text-sm text-center max-w-[700px] mx-auto smallText">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
             est, fugit harum sequi tenetur inventore consequuntur commodi sed
             officia rem.
           </div>
         </div>
-        <div className="absolute bottom-0 h-[450px] left-0 right-0">
+        <div className="lg:absoute bottom-0 h-[450px] left-0 right-0">
           <img
             src={homeBanner}
             alt=""
-            className="w-full h-full object-contain absolute bottom-[-30px] lg:bottom-0"
+            className="w-full h-full object-contain lg: bottom-[-30px] lg:bottom-0"
           />
         </div>
       </section>
