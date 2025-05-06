@@ -1,17 +1,17 @@
 import React from 'react'
-import homeBanner from "../assets/homeBanner.png"
+import homeBanner from "../../assets/homeBanner.png"
 import { FiSearch } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
-import demo from "../assets/bannerbg.png"
-import bgshade from "../assets/bgshade.png"
-import calender from "../assets/calender.jpeg"
+import demo from "../../assets/bannerbg.png"
+import bgshade from "../../assets/bgshade.png"
+import calender from "../../assets/calender.jpeg"
 import { IoIosStar } from "react-icons/io";
 import { TbHome2 } from "react-icons/tb";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsCalendar3 } from "react-icons/bs";
 import { HiMiniUsers } from "react-icons/hi2";
 import { MdArrowOutward } from "react-icons/md";
-import curveline from "../assets/curv.png"
+import curveline from "../../assets/curv.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -220,7 +220,7 @@ const Home = () => {
       </section>
 
       <section className="mb-10 lg:mb-20">
-        <div className="max-w-[1200px] w-full mx-auto flex flex-col justify-center items-center">
+        <div className="max-w-[1200px] w-full mx-auto flex flex-col justify-center items-center px-2">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-5 w-full">
             {/* left */}
             <div className="col-span-4 w-full h-[450px] bg-[#000] overflow-hidden rounded-3xl relative">
@@ -264,6 +264,18 @@ const Home = () => {
                 </div>
               </div>
               <div className="w-full h-[215px] rounded-3xl bg-[#000] relative overflow-hidden">
+                <div className="absolute right-3 top-3 z-10 p-2 bg-[#06362E] text-[#E2C686] rounded-full shadow-sm">
+                  <MdArrowOutward />
+                </div>
+                <div className="flex flex-col absolute bottom-2 px-10 z-10">
+                  <div className="boldText font-bold text-2xl relative z-10   text-[#fff]">
+                    Home Stay
+                  </div>
+                  <div className="text-sm text-[#fff]">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat, quasi.
+                  </div>
+                </div>
                 <div className="absolute top-0 bottom-0 left-0 right-0">
                   <img
                     src="https://i.pinimg.com/originals/92/42/6a/92426a43fd391f5ca2d73b4ac862b23a.jpg"
@@ -343,7 +355,7 @@ const Home = () => {
                   Exceptional Properties Located in Stunning Surrounding
                 </div>
                 <div className="flex px-10 absolute bottom-10">
-                  <div className="px-6 flex gap-2 items-center text-sm relative py-2 rounded-full bg-[#ffffff58] text-[#06362E] font-bold boldText">
+                  <div className="px-6 flex gap-2 items-center text-sm relative py-2 rounded-full bg-[#E2C686] text-[#06362E] font-bold boldText">
                     Show Top-Rated Villas <FaArrowRight />
                   </div>
                 </div>

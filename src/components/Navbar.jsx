@@ -52,12 +52,16 @@ const Navbar = () => {
                 Gallery
               </li>
             </a>
-            <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
-              Room
-            </li>
-            <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
-              Contact Us
-            </li>
+            <a href="/room">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
+                Room
+              </li>
+            </a>
+            <a href="/">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
+                Contact Us
+              </li>
+            </a>
           </ul>
         </nav>
         {/* Login */}

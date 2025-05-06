@@ -1,5 +1,5 @@
 import React from 'react'
-import CurvedSlider from './CurvedSlider'
+import CurvedSlider from '../Gallery/CurvedSlider'
 
 const Gallery = () => {
   return (

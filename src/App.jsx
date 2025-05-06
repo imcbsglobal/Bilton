@@ -1,9 +1,10 @@
 import Footer from "./components/Footer"
-import Home from "./components/Home"
+import Home from "./components/Home/Home"
 import Navbar from "./components/Navbar"
-import About from "./components/About"
+import About from "./components/About/About"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import Gallery from "./components/Gallery"
+import Gallery from "./components/Gallery/Gallery"
+import Room from "./components/Room/Room"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
+        <Route path="/room" element={<Room/>}/>
       </Routes>
       <Footer/>
     </Router>

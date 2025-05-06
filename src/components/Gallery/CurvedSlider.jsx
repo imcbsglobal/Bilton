@@ -7,7 +7,7 @@ import { EffectCoverflow, Autoplay } from 'swiper/modules';
 const images = [
   'https://avatars.mds.yandex.net/i?id=518b44dc418cf7f6664bd8c70b5d20b02b6df5a0-5697811-images-thumbs&n=13',
   'https://avatars.mds.yandex.net/get-altay/1899063/2a0000016a69e31666453161ff0a6671ba57/XXL_height',
-  'https://cdn1.ozone.ru/s3/multimedia-n/6449414303.jpg',
+  'https://i.pinimg.com/originals/72/fa/97/72fa97df342c0014409a80bda2e26990.jpg',
   'https://avatars.mds.yandex.net/i?id=0b8016b06e84a8782d3af14f9a1fa1de_l-8282002-images-thumbs&ref=rim&n=13&w=2000&h=1415',
   'https://avatars.mds.yandex.net/i?id=329fbcafb06f3d8925cf818c7f61e815_l-10507661-images-thumbs&ref=rim&n=13&w=3000&h=2000',
 ];
