@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import homeBanner from "../../assets/homeBanner.png"
 import { FiSearch } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
@@ -17,37 +17,77 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 
 SwiperCore.use([Autoplay]);
 
 
 const Home = () => {
-    const roomsData = [
-        {name : "Master Bed", img : "https://media.cntraveler.com/photos/53dabff3dcd5888e145ca051/master/w_1200,c_limit/eccleston-square-hotel-london-england-2-113144.jpg", desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro! Maiores impedit quas quis, voluptatem minus nostrum deserunt beatae, corporis dolorem consequatur quidem minima in dolores eum provident iste sequi?"},
-        {name : "Master Bed", img : "", desc : ""},
-        {name : "Master Bed", img : "", desc : ""},
-    ]
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+
+  // Parallax effect for the image (zooms in as you scroll)
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  
+  // Parallax effect for the text (moves up as you scroll)
+  const textY = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  
+  // Fade in animation when section comes into view
+  const [textRef, textInView] = useInView({
+    threshold: 0.3,
+    triggerOnce: true
+  });
+  const roomsData = [
+      {name : "Master Bed", img : "https://media.cntraveler.com/photos/53dabff3dcd5888e145ca051/master/w_1200,c_limit/eccleston-square-hotel-london-england-2-113144.jpg", desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro! Maiores impedit quas quis, voluptatem minus nostrum deserunt beatae, corporis dolorem consequatur quidem minima in dolores eum provident iste sequi?"},
+      {name : "Master Bed", img : "", desc : ""},
+      {name : "Master Bed", img : "", desc : ""},
+  ]
+   
   return (
     <div className="overflow-hidden">
-      <section className="homeBannerBg lg:mb-20 flex flex-col items-center h-screen w-full relative">
-        <div className="pt-[140px] px-2">
-          <div className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E]">
-            Where Serenity Meets <span className="block">Luxury</span>
-          </div>
-          <div className="block text-sm text-center max-w-[700px] mx-auto smallText">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-            est, fugit harum sequi tenetur inventore consequuntur commodi sed
-            officia rem.
-          </div>
-        </div>
-        <div className="lg:absoute bottom-0 h-[450px] left-0 right-0">
-          <img
-            src={homeBanner}
-            alt=""
-            className="w-full h-full object-contain lg: bottom-[-30px] lg:bottom-0"
-          />
-        </div>
-      </section>
+    <section 
+    ref={sectionRef}
+    className="homeBannerBg lg:mb-20 flex flex-col mb-10 md:mb-0 items-center h-screen w-full relative overflow-hidden"
+  >
+    <div className="pt-[140px] px-2 z-10">
+      <motion.div 
+        ref={textRef}
+        initial={{ opacity: 0, y: 20 }}
+        animate={textInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        style={{ y: textY }}
+        className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E]"
+      >
+        Where Serenity Meets <motion.span className="block">Luxury</motion.span>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={textInView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+        style={{ y: textY }}
+        className="block text-sm text-center max-w-[700px] mx-auto smallText"
+      >
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+        est, fugit harum sequi tenetur inventore consequuntur commodi sed
+        officia rem.
+      </motion.div>
+    </div>
+    <motion.div 
+      style={{ scale: imageScale }}
+      className="lg:absolute bottom-0 h-[450px] left-0 right-0 w-full"
+    >
+      <img
+        src={homeBanner}
+        alt="Luxury hotel banner"
+        className="w-full h-full object-contain lg:bottom-[-30px] lg:bottom-0"
+      />
+    </motion.div>
+  </section>
 
       <section className="mb-0 md:mb-10 w-full">
         <div className="max-w-[1400px] mx-auto w-full">
@@ -154,7 +194,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="lg:mb-10 bg-gradient-to-b from-[#ffff] via-[#ffe7b0] to-[#fff] py-10 w-full relative">
+      <section className="lg:mb-10 bg-[#ffe7b0] py-10 w-full relative">
         <div className="absolute top-0 bottom-0 left-0 right-0">
           <img src={demo} alt="" className="h-full w-full object-cover" />
         </div>

@@ -3,7 +3,6 @@ import logo from "../assets/logo.png";
 import MobileNavbar from './MobileNavbar';
 import { RiMenu3Line } from "react-icons/ri";
 
-
 const Navbar = () => {
   const [showSmallHeader, setShowSmallHeader] = useState(false);
   const [openMenu, setOpenMenu] = useState(false)
@@ -57,7 +56,7 @@ const Navbar = () => {
                 Room
               </li>
             </a>
-            <a href="/">
+            <a href="/contact">
               <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
                 Contact Us
               </li>
@@ -66,9 +65,11 @@ const Navbar = () => {
         </nav>
         {/* Login */}
         <div className="items-center gap-5 hidden lg:flex">
-          <button className="px-8 py-2 rounded-full bg-[#06362E] font-semibold text-[#E2C686]">
+          <a href="/login">
+          <button className="px-8 py-2 rounded-full cursor-pointer bg-[#06362E] font-semibold text-[#E2C686]">
             Book Room
           </button>
+          </a>
           <button className="px-8 py-2 rounded-full bg-[#231F20] font-semibold text-[#E2C686]">
             Login
           </button>
@@ -110,9 +111,11 @@ const Navbar = () => {
                 Room
               </li>
             </a>
-            <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
-              Contact Us
-            </li>
+            <a href="/contact">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">
+                Contact Us
+              </li>
+            </a>
           </ul>
         </nav>
         <div className="lg:hidden text-[#06362E]" onClick={() => setOpenMenu(!openMenu)}>

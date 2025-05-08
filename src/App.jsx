@@ -5,6 +5,9 @@ import About from "./components/About/About"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Gallery from "./components/Gallery/Gallery"
 import Room from "./components/Room/Room"
+import Contact from "./components/Contact/Contact"
+import LoginPage from "./components/Login/LoginPage"
+import Register from "./components/Login/Register"
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/room" element={<Room/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
       <Footer/>
     </Router>
