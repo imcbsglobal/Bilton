@@ -86,7 +86,7 @@ const MobileNavbar = ({openMenu, setOpenMenu}) => {
           initial={{x:-100,opacity:0}}
           animate={{x:0,opacity:1,transition:{duration:1,ease:"backInOut",delay:1}}}
           exit={{x:-100,opacity:0,transition:{duration:0.3,ease:"backInOut"}}}
-          href="/register" onClick={() => setOpenMenu(!openMenu)}>
+          href="/roomDetail" onClick={() => setOpenMenu(!openMenu)}>
             <div className='px-6 py-1 rounded-lg bg-[#E2C686] text-[#06362E] font-semibold'>Book Room</div>
           </motion.a>
         </div>

@@ -198,7 +198,7 @@ const Home = () => {
         <div className="absolute top-0 bottom-0 left-0 right-0">
           <img src={demo} alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="max-w-[1400px] bg-[#ffffff2e] mx-auto pt-16 md:pt-0 md:py-16 rounded-3xl px-2 lg:px-20 w-full drop-shadow-sm">
+        <div className="max-w-[1400px] mx-auto pt-16 md:pt-0 md:py-16 rounded-3xl px-2 lg:px-20 w-full">
           <div className="text-center mb-10 font-bold boldText text-5xl md:text-5xl text-[#06362E]">
             Lorem Ipsum Lorem <span className="block">ipsum dolor sit</span>
           </div>
@@ -609,7 +609,7 @@ const Home = () => {
 </section>
 
 
-      <section className="mb-10">
+      <section className="mb-10 px-2">
         <div className="max-w-[1200px] relative mx-auto py-20 bg-[#030303] overflow-hidden rounded-3xl">
           <div className="absolute inset-0 bg-[#00000042] z-10"></div>
           <div className="absolute top-0 bottom-0 left-0 right-0 w-full">

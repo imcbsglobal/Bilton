@@ -65,24 +65,29 @@ const Navbar = () => {
         </nav>
         {/* Login */}
         <div className="items-center gap-5 hidden lg:flex">
-          <a href="/login">
-          <button className="px-8 py-2 rounded-full cursor-pointer bg-[#06362E] font-semibold text-[#E2C686]">
-            Book Room
-          </button>
+          <a href="/roomDetail">
+            <button className="px-8 py-2 rounded-full cursor-pointer bg-[#06362E] font-semibold text-[#E2C686]">
+              Book Room
+            </button>
           </a>
-          <button className="px-8 py-2 rounded-full bg-[#231F20] font-semibold text-[#E2C686]">
-            Login
-          </button>
+          <a href="/login">
+            <button className="px-8 py-2 cursor-pointer rounded-full bg-[#231F20] font-semibold text-[#E2C686]">
+              Login
+            </button>
+          </a>
         </div>
 
-        <div className="text-3xl text-[#06362E] lg:hidden" onClick={() => setOpenMenu(!openMenu)}>
+        <div
+          className="text-3xl text-[#06362E] lg:hidden"
+          onClick={() => setOpenMenu(!openMenu)}
+        >
           <RiMenu3Line />
         </div>
       </header>
 
       {/* Second Small Header */}
       <header
-        className={`fixed top-5 left-0 right-0 py-3 flex justify-between items-center px-10 z-[998] max-w-[900px] mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-[#ffecbe] rounded-full transition-all duration-500 ${
+        className={`fixed top-5 left-0 right-0 py-5 flex justify-between items-center px-10 z-[998] max-w-[900px] mx-auto shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-[#ffecbe] rounded-full transition-all duration-500 ${
           showSmallHeader ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -118,7 +123,10 @@ const Navbar = () => {
             </a>
           </ul>
         </nav>
-        <div className="lg:hidden text-[#06362E]" onClick={() => setOpenMenu(!openMenu)}>
+        <div
+          className="lg:hidden text-[#06362E] text-2xl"
+          onClick={() => setOpenMenu(!openMenu)}
+        >
           <RiMenu3Line />
         </div>
       </header>
@@ -126,7 +134,7 @@ const Navbar = () => {
       {/* Mobile Navbar */}
       {openMenu && (
         <div>
-          <MobileNavbar openMenu={openMenu} setOpenMenu={setOpenMenu}/>
+          <MobileNavbar openMenu={openMenu} setOpenMenu={setOpenMenu} />
         </div>
       )}
     </div>
