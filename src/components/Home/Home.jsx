@@ -61,16 +61,41 @@ const Home = () => {
         animate={textInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
         style={{ y: textY }}
-        className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E]"
+        className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E] overflow-hidden"
       >
-        Where Serenity Meets <motion.span className="block">Luxury</motion.span>
+        <div className="animate-slideUp">
+          <span className="inline-block overflow-hidden">
+            {Array.from("Where Serenity Meets").map((char, i) => (
+              <span
+                key={`char-${i}`}
+                className="inline-block animate-letterReveal"
+                style={{ animationDelay: `${i * 0.05}s` }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </span>
+        </div>
+        <div className="animate-slideUp block">
+          <span className="inline-block overflow-hidden">
+            {Array.from("Luxury").map((char, i) => (
+              <span
+                key={`char2-${i}`}
+                className="inline-block animate-letterReveal"
+                style={{ animationDelay: `${i * 0.05 + 0.2}s` }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </span>
+            ))}
+          </span>
+        </div>
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
         animate={textInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         style={{ y: textY }}
-        className="block text-sm text-center max-w-[700px] mx-auto smallText"
+        className="block text-sm text-center max-w-[700px] mx-auto smallText animate-fadeIn delay-700"
       >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
         est, fugit harum sequi tenetur inventore consequuntur commodi sed
@@ -87,7 +112,7 @@ const Home = () => {
         className="w-full h-full object-contain lg:bottom-[-30px] lg:bottom-0"
       />
     </motion.div>
-  </section>
+</section>
 
       <section className="mb-0 md:mb-10 w-full">
         <div className="max-w-[1400px] mx-auto w-full">
