@@ -15,7 +15,7 @@ const Checkout = () => {
     <div className="pt-[130px]">
       <section className="mb-10">
         <div className="w-full max-w-[1300px] mx-auto md:flex justify-center items-center gap-5">
-          <div className="w-full md:w-[75%] h-[800px] shadow-[0_3px_10px_rgb(0,0,0,0.1)] bg-[#ffffff] border border-[#ffed94] rounded-3xl py-10 px-10">
+          <div className="w-full mb-5 md:mb-0 md:w-[75%] h-auto md:h-[800px] shadow-[0_3px_10px_rgb(0,0,0,0.1)] bg-[#ffffff] border border-[#ffed94] rounded-3xl py-10 px-10">
             <div className="text-3xl boldText mb-5 text-[#06362E]">
               Enter Your Details
             </div>
@@ -108,8 +108,8 @@ const Checkout = () => {
             </div>
           </div>
           {/* Right */}
-          <div className="w-full md:w-[25%] h-[800px] bg-[#ffed94] rounded-3xl">
-            <div className="w-full h-[250px] rounded-3xl overflow-hidden mb-2">
+          <div className="w-full md:w-[25%] h-auto py-10 md:h-[800px] bg-[#ffed94] rounded-3xl">
+            <div className="w-full px-2 h-[250px] rounded-3xl overflow-hidden mb-2">
               <img
                 src="https://avatars.mds.yandex.net/i?id=e43a3b6c87037a05e118e32ee197d6007d374d02-5888427-images-thumbs&ref=rim&n=33&w=375&h=250"
                 alt=""
