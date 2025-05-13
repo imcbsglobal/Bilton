@@ -3,8 +3,14 @@ import { TbCurrencyRupee } from "react-icons/tb";
 import { TbStarFilled } from "react-icons/tb";
 import { MdCreditCardOff } from "react-icons/md";
 import { IoCloudDone } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
+  const navigate = useNavigate()
+
+  const handleSubmit = () =>{
+    navigate("/CheckBookingConfirmation")
+  }
   return (
     <div className="pt-[130px]">
       <section className="mb-10">
@@ -96,7 +102,7 @@ const Checkout = () => {
                 </div>
                 {/* Submit Button */}
                 <div className='mt-5 flex justify-center items-center w-full'>
-                    <button className='w-full py-2 px-5 bg-[#06362E] rounded-lg text-[#E2C686] font-bold'>Submit</button>
+                    <button className='w-full py-2 px-5 bg-[#06362E] rounded-lg text-[#E2C686] font-bold' onClick={handleSubmit}>Submit</button>
                 </div>
               </form>
             </div>

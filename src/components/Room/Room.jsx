@@ -6,11 +6,17 @@ import { FiSearch } from "react-icons/fi";
 import { HiStar } from "react-icons/hi";
 import { TbUsers } from "react-icons/tb";
 import { Search, Bed, Calendar, Users, ChevronDown } from 'lucide-react';
+import { useNavigate } from "react-router-dom"
 
 const Room = () => {
   const [roomType, setRoomType] = useState('Luxury Suite');
   const [dates, setDates] = useState('May 10 - May 15, 2025');
   const [guests, setGuests] = useState('2 Adults, 1 Child');
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate("/roomDetail")
+  }
 
   const roomData = [
     {name:"Master Bed Room", img : "https://www.johndickandson.co.uk/wp-content/uploads/2019/06/Aleal-15.jpg", visitors : 320, room:"1 extra-large double bed"},
@@ -113,7 +119,8 @@ const Room = () => {
         <div className="max-w-[1400px] mx-auto px-2">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 w-full">
             {roomData.map((room) => (
-              <div className="w-full h-[400px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-[#06362E] rounded-3xl">
+              <a href="/roomDetail">
+              <div className="w-full h-[400px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-[#06362E] rounded-3xl" onClick={handleNavigate}>
                 <div className='h-[300px] w-full rounded-3xl overflow-hidden'>
                   <img src={room.img} alt="" className='h-full w-full object-cover'/>
                 </div>
@@ -131,6 +138,7 @@ const Room = () => {
                   </div>
                 </div>
               </div>
+              </a>
             ))}
           </div>
         </div>

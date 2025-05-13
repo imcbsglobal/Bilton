@@ -11,6 +11,7 @@ import Register from "./components/Login/Register"
 import RoomDetails from "./components/Room/RoomDetails"
 import Checkout from "./components/Room/Checkout"
 import CheckBookingConfirmation from "./components/Room/CheckBookingConfirmation"
+import Payment from "./Payment"
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/roomDetail" element={<RoomDetails/>}/>
         <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/CheckBookingConfirmation" element={<CheckBookingConfirmation/>}/>
+        <Route path="/payment" element={<Payment/>}/>
       </Routes>
       <Footer/>
     </Router>

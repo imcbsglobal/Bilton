@@ -14,7 +14,7 @@ const MobileNavbar = ({openMenu, setOpenMenu}) => {
       <div className='absolute top-0 right-0 bottom-0 left-0'>
         <img src={bannerBg} alt="" className='w-full h-full object-cover opacity-20'/>
       </div>
-      <div className='text-[#E2C686] absolute top-5 right-5 text-xl' onClick={() => setOpenMenu(!openMenu)}>
+      <div className='text-[#E2C686] z-[999] absolute top-5 right-5 text-xl' onClick={() => setOpenMenu(!openMenu)}>
         <IoClose/>
       </div>
       <header className='h-full w-full flex flex-col justify-evenly items-center gap-2 relative z-50'>

@@ -13,7 +13,9 @@ const CheckBookingConfirmation = () => {
             <div className='px-10 text-center mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis dolor quidem possimus in sunt labore consequatur. Laudantium voluptas, neque quidem mollitia alias quam, corrupti magni natus suscipit ad aperiam.</div>
             <div className='flex justify-center gap-2 md:gap-10'>
                 <button className='py-2 px-6 rounded-lg bg-[#06362E] text-[#E2C686] font-semibold cursor-pointer' onClick={() => setOpenConfirmPopUp(!openConfirmPopUp)}>Check your booking</button>
-                <button className='py-2 px-6 rounded-lg bg-[#06362E] text-[#E2C686] font-semibold cursor-pointer'>Complete booking</button>
+                <a href="/payment">
+                  <button className='py-2 px-6 rounded-lg bg-[#06362E] text-[#E2C686] font-semibold cursor-pointer'>Complete booking</button>
+                </a>
             </div>
         </div>
       </section>

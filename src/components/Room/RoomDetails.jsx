@@ -143,7 +143,7 @@ const RoomDetails = () => {
                     <TbCurrencyRupee/>3000
                 </div>
             </div>
-            <a href="/CheckBookingConfirmation">
+            <a href="/checkout">
                 <div className="py-2 px-5 flex justify-center items-center w-full mb-5 bg-[#fff] rounded-xl font-semibold text-[#06362E]">Book Now</div>
             </a>
             <div className="text-xs text-center text-[#ffffffd0]">You will not get charged yet</div>
