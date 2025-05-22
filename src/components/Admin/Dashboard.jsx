@@ -40,13 +40,14 @@ import CreateBookingView from './ManageBooking'
 import RequestsView from './BookingRequest'
 import RoomsView from './BookManagement'
 import UsersView from './RegisteredUsers'
+import CalendarView from './Calender'
 // Simplified components for each menu section
-const CalendarView = () => (
-  <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-    <h2 className="text-xl font-bold mb-4">Calendar</h2>
-    <p>Calendar content goes here</p>
-  </div>
-);
+// const CalendarView = () => (
+//   <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+//     <h2 className="text-xl font-bold mb-4">Calendar</h2>
+//     <p>Calendar content goes here</p>
+//   </div>
+// );
 
 const ScheduleView = () => (
   <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
