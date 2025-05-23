@@ -406,7 +406,7 @@ const BookingCalendar = ({ onNavigate }) => {
                 </div>
               )}
             </div>
-          </div>
+          </ div>
         </div>
       )}
     </div>
