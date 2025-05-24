@@ -31,6 +31,7 @@ import {
   UserCheck,
   ClipboardList
 } from "lucide-react";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area } from 'recharts';
 import ImageGallery from "./ImageGallery";
 import VideoGallery from "./VideoGallery";
 import TestimonialsView from "./Testimonials";
@@ -45,15 +46,12 @@ import TasksView from './Task'
 import ScheduleView from './WorkShedule'
 import EmployeesView from './Employees'
 
-
 const SubmissionsView = () => (
   <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
     <h2 className="text-xl font-bold mb-4">Content Submissions</h2>
     <p>Submissions content goes here</p>
   </div>
 );
-
-
 
 const AnalyticsView = () => (
   <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
@@ -83,6 +81,26 @@ const HotelDashboard = () => {
     danger: "#ef4444",      // Red
   };
 
+  // Sample booking data for the last 6 months
+  const bookingData = [
+    { name: 'Jan', previous: 85, current: 92 },
+    { name: 'Feb', previous: 78, current: 89 },
+    { name: 'Mar', previous: 92, current: 105 },
+    { name: 'Apr', previous: 88, current: 94 },
+    { name: 'May', previous: 95, current: 120 },
+    { name: 'Jun', previous: 102, current: 135 },
+  ];
+
+  // Sample profit data for the last 6 months
+  const profitData = [
+    { name: 'Jan', previous: 42500, current: 46000 },
+    { name: 'Feb', previous: 39000, current: 44500 },
+    { name: 'Mar', previous: 46000, current: 52500 },
+    { name: 'Apr', previous: 44000, current: 47000 },
+    { name: 'May', previous: 47500, current: 60000 },
+    { name: 'Jun', previous: 51000, current: 67500 },
+  ];
+
   // Organized menu items
   const menuItems = [
     {
@@ -90,9 +108,6 @@ const HotelDashboard = () => {
       items: [
         { id: "dashboard", label: "Dashboard", icon: Home },
         { id: "calendar", label: "Calendar", icon: Calendar },
-        { id: "schedule", label: "Work Schedule", icon: Clock },
-        { id: "tasks", label: "Tasks", icon: FileText, active: true },
-        { id: "employees", label: "Employees", icon: Users },
       ]
     },
     {
@@ -118,8 +133,6 @@ const HotelDashboard = () => {
       category: "Administration",
       items: [
         { id: "users", label: "Registered Users", icon: UserCheck },
-        // { id: "analytics", label: "Analytics", icon: BarChart3 },
-        // { id: "settings", label: "Settings", icon: Settings },
       ]
     }
   ];
@@ -224,7 +237,7 @@ const HotelDashboard = () => {
               <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Tasks</p>
+                    <p className="text-sm font-medium text-gray-600">Total Bookings</p>
                     <p className="text-3xl font-bold text-gray-900 mt-2">120</p>
                     <div className="flex items-center mt-2">
                       <TrendingUp className="w-4 h-4 text-green-500" />
@@ -240,7 +253,7 @@ const HotelDashboard = () => {
               <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Completed</p>
+                    <p className="text-sm font-medium text-gray-600">Total Check-in</p>
                     <p className="text-3xl font-bold text-gray-900 mt-2">103</p>
                     <div className="flex items-center mt-2">
                       <TrendingUp className="w-4 h-4 text-green-500" />
@@ -256,7 +269,7 @@ const HotelDashboard = () => {
               <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">In Progress</p>
+                    <p className="text-sm font-medium text-gray-600">Online Bookings</p>
                     <p className="text-3xl font-bold text-gray-900 mt-2">12</p>
                     <div className="flex items-center mt-2">
                       <Clock className="w-4 h-4 text-blue-500" />
@@ -272,71 +285,74 @@ const HotelDashboard = () => {
               <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Overdue</p>
-                    <p className="text-3xl font-bold text-gray-900 mt-2">5</p>
+                    <p className="text-sm font-medium text-gray-600">Offline Bookings</p>
+                    <p className="text-3xl font-bold text-gray-900 mt-2">18</p>
                     <div className="flex items-center mt-2">
-                      <X className="w-4 h-4 text-red-500" />
-                      <span className="text-sm text-red-600 ml-1">Needs attention</span>
+                      <Clock className="w-4 h-4 text-blue-500" />
+                      <span className="text-sm text-blue-600 ml-1">10% of total</span>
                     </div>
                   </div>
-                  <div className="bg-red-100 p-3 rounded-lg">
-                    <X className="w-6 h-6 text-red-600" />
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Clock className="w-6 h-6 text-blue-600" />
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Department Overview */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-              <div className="lg:col-span-2 bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Department Performance</h3>
-                <div className="space-y-4">
-                  {departmentStats.map((dept) => (
-                    <div key={dept.name} className="flex items-center justify-between">
-                      <div className="flex items-center">
-                        <div className={`w-3 h-3 rounded-full ${dept.color} mr-3`}></div>
-                        <span className="text-sm font-medium text-gray-900">{dept.name}</span>
-                      </div>
-                      <div className="flex items-center space-x-4">
-                        <span className="text-sm text-gray-600">{dept.completed}/{dept.tasks}</span>
-                        <div className="w-24 bg-gray-200 rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full ${dept.color}`}
-                            style={{ width: `${(dept.completed / dept.tasks) * 100}%` }}
-                          ></div>
-                        </div>
-                        <span className="text-sm font-medium text-gray-900 w-12 text-right">
-                          {Math.round((dept.completed / dept.tasks) * 100)}%
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
+            {/* Charts Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+              {/* Bookings Chart */}
               <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-                <div className="space-y-3">
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
-                    Create New Task
-                  </button>
-                  <button className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
-                    Assign Tasks
-                  </button>
-                  <button className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
-                    Generate Report
-                  </button>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Bookings Comparison</h3>
+                <div className="h-80">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart
+                      data={bookingData}
+                      margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                      }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip />
+                      <Legend />
+                      <Bar dataKey="previous" fill="#8884d8" name="Previous Month" />
+                      <Bar dataKey="current" fill="#82ca9d" name="Current Month" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+
+              {/* Profit Chart */}
+              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Profit Comparison</h3>
+                <div className="h-80">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart
+                      data={profitData}
+                      margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                      }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <Tooltip formatter={(value) => [`$${value.toLocaleString()}`, "Profit"]} />
+                      <Legend />
+                      <Area type="monotone" dataKey="previous" stroke="#8884d8" fill="#8884d8" name="Previous Month" />
+                      <Area type="monotone" dataKey="current" stroke="#82ca9d" fill="#82ca9d" name="Current Month" />
+                    </AreaChart>
+                  </ResponsiveContainer>
                 </div>
               </div>
             </div>
-
-            <TasksView 
-              tasks={filteredTasks} 
-              activeTab={activeTab} 
-              setActiveTab={setActiveTab}
-              getPriorityColor={getPriorityColor}
-              getStatusColor={getStatusColor}
-            />
           </>
         );
       case "gallery":
