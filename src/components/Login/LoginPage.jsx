@@ -18,7 +18,18 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login submitted with:", { email, password });
-    navigate("/admin"); // Use navigate instead of Link for programmatic navigation
+    
+    // Check user credentials and redirect accordingly
+    if (email === "user@gmail.com" && password === "123456") {
+      navigate("/userpanel");
+    } else if (email === "admin@gmail.com" && password === "123456") {
+      navigate("/admin");
+    } else {
+      // Handle invalid credentials - you might want to show an error message
+      console.log("Invalid credentials");
+      // For now, we'll just stay on the login page
+      // You could add error handling here
+    }
   };
 
   return (
@@ -51,7 +62,7 @@ const LoginPage = () => {
             </div>
 
             {/* Login Form */}
-            <div className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               {/* Email Input */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -64,6 +75,7 @@ const LoginPage = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#06362E] focus:border-transparent text-gray-900"
                   placeholder="john@example.com"
+                  required
                 />
               </div>
 
@@ -80,6 +92,7 @@ const LoginPage = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full p-3 pr-12 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#06362E] focus:border-transparent text-gray-900"
                     placeholder="••••••••"
+                    required
                   />
                   <button
                     type="button"
@@ -109,13 +122,12 @@ const LoginPage = () => {
 
               {/* Login Button */}
               <button
-                type="button"
-                onClick={handleSubmit}
+                type="submit"
                 className="w-full bg-[#06362E] text-white font-semibold py-3 px-6 rounded-xl hover:bg-[#06362E] transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
               >
                 Login
               </button>
-            </div>
+            </form>
 
             {/* Register Link */}
             <div className="mt-6 text-center">

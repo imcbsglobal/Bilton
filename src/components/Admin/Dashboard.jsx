@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { 
   Search, 
   Calendar, 
@@ -29,7 +30,8 @@ import {
   TrendingUp,
   Building2,
   UserCheck,
-  ClipboardList
+  ClipboardList,
+   LogOut
 } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area } from 'recharts';
 import ImageGallery from "./ImageGallery";
@@ -70,7 +72,7 @@ const SettingsView = () => (
 const HotelDashboard = () => {
   const [activeTab, setActiveTab] = useState("all");
   const [currentView, setCurrentView] = useState("dashboard");
-  
+  const navigate = useNavigate();
   // Theme colors
   const colors = {
     primary: "#1e40af",     // Modern blue
@@ -427,7 +429,12 @@ const HotelDashboard = () => {
       default: return "Dashboard overview";
     }
   };
-
+  const handleLogout = () => {
+    
+    console.log("User logged out");
+    localStorage.removeItem('token'); 
+    navigate('/login'); 
+  };
   return (
     <div className="flex h-screen bg-gray-50">
       {/* Sidebar */}
@@ -436,7 +443,7 @@ const HotelDashboard = () => {
           <h1 className="text-2xl font-bold text-gray-800">BILTON</h1>
           <p className="text-sm text-gray-500 mt-1">Management Dashboard</p>
         </div>
-        
+
         <nav className="flex-1 overflow-y-auto py-4">
           {menuItems.map((category) => (
             <div key={category.category} className="mb-6">
@@ -466,15 +473,30 @@ const HotelDashboard = () => {
             </div>
           ))}
         </nav>
-        
+
         <div className="p-6 border-t">
-          <div className="flex items-center">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <User className="w-5 h-5 text-blue-600" />
-            </div>
-            <div className="ml-3">
-              <p className="text-sm font-medium text-gray-700">Adam Smith</p>
-              <p className="text-xs text-gray-500">Administrator</p>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center justify-between w-full">
+              {/* User Info */}
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <User className="w-5 h-5 text-blue-600" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-gray-700">
+                    Adam Smith
+                  </p>
+                  <p className="text-xs text-gray-500">Administrator</p>
+                </div>
+              </div>
+
+              {/* Logout Button */}
+              <button
+                onClick={handleLogout}
+                className="ml-4 flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>
@@ -494,28 +516,34 @@ const HotelDashboard = () => {
                   {getViewDescription()}
                 </p>
               </div>
-              
+
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder={currentView === "gallery" ? "Search images..." : `Search ${currentView}...`}
+                    placeholder={
+                      currentView === "gallery"
+                        ? "Search images..."
+                        : `Search ${currentView}...`
+                    }
                     className="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                   <Search className="w-5 h-5 text-gray-400 absolute left-3 top-2.5" />
                 </div>
-                
+
                 <button className="p-2 text-gray-400 hover:text-gray-600 relative">
                   <MessageCircle className="w-6 h-6" />
                 </button>
-                
+
                 <button className="p-2 text-gray-400 hover:text-gray-600 relative">
                   <Bell className="w-6 h-6" />
                   <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
-                
+
                 <div className="flex items-center space-x-2 bg-gray-50 rounded-lg p-2">
-                  <span className="text-sm font-medium text-gray-700">BILTON</span>
+                  <span className="text-sm font-medium text-gray-700">
+                    BILTON
+                  </span>
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 </div>
               </div>

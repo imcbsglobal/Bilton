@@ -21,6 +21,8 @@ const VideoGallery = () => {
     duration: ""
   });
 
+
+
   // Sample video data
   const [videos, setVideos] = useState([
     {
@@ -563,12 +565,13 @@ const VideoGallery = () => {
               
               <div className="flex justify-end mt-6 space-x-3">
                 <button
-                  type="button"
+                  type="button" sona dsilva hi m
                   className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50"
                   onClick={() => setIsEditModalOpen(false)}
                 >
                   Cancel
                 </button>
+                 
                 <button
                   type="button"
                   className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"

@@ -16,9 +16,10 @@ import Payment from "./Payment"
 import Admin from './components/Admin/Dashboard'
 import ImageGallery from "./components/Admin/ImageGallery"
 import VideoGallery from "./components/Admin/VideoGallery"
+import UserPanel from './components/User/UserPanel'
 function AppContent() {
   const location = useLocation()
-  const isAdminRoute = location.pathname.startsWith('/admin') || location.pathname.startsWith('/login') || location.pathname.startsWith('/imagegallery') || location.pathname.startsWith('/videogallery')
+  const isAdminRoute = location.pathname.startsWith('/admin') || location.pathname.startsWith('/login') || location.pathname.startsWith('/imagegallery') || location.pathname.startsWith('/videogallery') || location.pathname.startsWith('/imagegallery') || location.pathname.startsWith('/userpanel')
 
   return (
     <>
@@ -38,6 +39,7 @@ function AppContent() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/imagegallery" element={<ImageGallery />} />
         <Route path="/videogallery" element={<ImageGallery />} />
+        <Route path="/userpanel" element={<UserPanel />} />
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
