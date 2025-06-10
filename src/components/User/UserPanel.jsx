@@ -61,7 +61,7 @@ const UserBookingPanel = () => {
       totalAmount: 1250,
       bookingDate: "2025-05-20",
     //   amenities: ["Ocean View", "King Bed", "Free WiFi", "Balcony", "Room Service"],
-    //   roomImage: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=250&fit=crop",
+      roomImage: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=250&fit=crop",
     //   specialRequests: "Late check-in requested"
     },
     {
@@ -75,7 +75,7 @@ const UserBookingPanel = () => {
       totalAmount: 800,
       bookingDate: "2025-05-25",
     //   amenities: ["Double Bed", "Free WiFi", "Air Conditioning", "TV"],
-    //   roomImage: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=250&fit=crop",
+      roomImage: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=250&fit=crop",
     //   specialRequests: "Ground floor room preferred"
     },
     {
@@ -88,9 +88,9 @@ const UserBookingPanel = () => {
       status: "Confirmed",
       totalAmount: 2500,
       bookingDate: "2025-05-28",
-      amenities: ["Ocean View", "King Bed", "Free WiFi", "Jacuzzi", "Butler Service", "Private Balcony"],
+      // amenities: ["Ocean View", "King Bed", "Free WiFi", "Jacuzzi", "Butler Service", "Private Balcony"],
       roomImage: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=400&h=250&fit=crop",
-      specialRequests: "Champagne and flowers for anniversary"
+      // specialRequests: "Champagne and flowers for anniversary"
     }
   ]);
 
