@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { 
   Search, 
@@ -31,7 +31,8 @@ import {
   Building2,
   UserCheck,
   ClipboardList,
-   LogOut
+  LogOut,
+  Menu
 } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area } from 'recharts';
 import ImageGallery from "./ImageGallery";
@@ -72,7 +73,22 @@ const SettingsView = () => (
 const HotelDashboard = () => {
   const [activeTab, setActiveTab] = useState("all");
   const [currentView, setCurrentView] = useState("dashboard");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Theme colors
   const colors = {
     primary: "#1e40af",     // Modern blue
@@ -227,6 +243,9 @@ const HotelDashboard = () => {
 
   const handleNavigation = (id) => {
     setCurrentView(id);
+    if (windowWidth <= 768) {
+      setIsMobileMenuOpen(false);
+    }
   };
 
   const renderMainContent = () => {
@@ -235,78 +254,78 @@ const HotelDashboard = () => {
         return (
           <>
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
+              <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Bookings</p>
-                    <p className="text-3xl font-bold text-gray-900 mt-2">120</p>
-                    <div className="flex items-center mt-2">
-                      <TrendingUp className="w-4 h-4 text-green-500" />
-                      <span className="text-sm text-green-600 ml-1">+12% from last week</span>
+                    <p className="text-xs md:text-sm font-medium text-gray-600">Total Bookings</p>
+                    <p className="text-xl md:text-3xl font-bold text-gray-900 mt-1 md:mt-2">120</p>
+                    <div className="flex items-center mt-1 md:mt-2">
+                      <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-green-500" />
+                      <span className="text-xs md:text-sm text-green-600 ml-1">+12% from last week</span>
                     </div>
                   </div>
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <ClipboardList className="w-6 h-6 text-blue-600" />
+                  <div className="bg-blue-100 p-2 md:p-3 rounded-lg">
+                    <ClipboardList className="w-4 h-4 md:w-6 md:h-6 text-blue-600" />
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Total Check-in</p>
-                    <p className="text-3xl font-bold text-gray-900 mt-2">103</p>
-                    <div className="flex items-center mt-2">
-                      <TrendingUp className="w-4 h-4 text-green-500" />
-                      <span className="text-sm text-green-600 ml-1">85.8% completion rate</span>
+                    <p className="text-xs md:text-sm font-medium text-gray-600">Total Check-in</p>
+                    <p className="text-xl md:text-3xl font-bold text-gray-900 mt-1 md:mt-2">103</p>
+                    <div className="flex items-center mt-1 md:mt-2">
+                      <TrendingUp className="w-3 h-3 md:w-4 md:h-4 text-green-500" />
+                      <span className="text-xs md:text-sm text-green-600 ml-1">85.8% completion rate</span>
                     </div>
                   </div>
-                  <div className="bg-green-100 p-3 rounded-lg">
-                    <Check className="w-6 h-6 text-green-600" />
+                  <div className="bg-green-100 p-2 md:p-3 rounded-lg">
+                    <Check className="w-4 h-4 md:w-6 md:h-6 text-green-600" />
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Online Bookings</p>
-                    <p className="text-3xl font-bold text-gray-900 mt-2">12</p>
-                    <div className="flex items-center mt-2">
-                      <Clock className="w-4 h-4 text-blue-500" />
-                      <span className="text-sm text-blue-600 ml-1">10% of total</span>
+                    <p className="text-xs md:text-sm font-medium text-gray-600">Online Bookings</p>
+                    <p className="text-xl md:text-3xl font-bold text-gray-900 mt-1 md:mt-2">12</p>
+                    <div className="flex items-center mt-1 md:mt-2">
+                      <Clock className="w-3 h-3 md:w-4 md:h-4 text-blue-500" />
+                      <span className="text-xs md:text-sm text-blue-600 ml-1">10% of total</span>
                     </div>
                   </div>
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-blue-600" />
+                  <div className="bg-blue-100 p-2 md:p-3 rounded-lg">
+                    <Clock className="w-4 h-4 md:w-6 md:h-6 text-blue-600" />
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium text-gray-600">Offline Bookings</p>
-                    <p className="text-3xl font-bold text-gray-900 mt-2">18</p>
-                    <div className="flex items-center mt-2">
-                      <Clock className="w-4 h-4 text-blue-500" />
-                      <span className="text-sm text-blue-600 ml-1">10% of total</span>
+                    <p className="text-xs md:text-sm font-medium text-gray-600">Offline Bookings</p>
+                    <p className="text-xl md:text-3xl font-bold text-gray-900 mt-1 md:mt-2">18</p>
+                    <div className="flex items-center mt-1 md:mt-2">
+                      <Clock className="w-3 h-3 md:w-4 md:h-4 text-blue-500" />
+                      <span className="text-xs md:text-sm text-blue-600 ml-1">10% of total</span>
                     </div>
                   </div>
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-blue-600" />
+                  <div className="bg-blue-100 p-2 md:p-3 rounded-lg">
+                    <Clock className="w-4 h-4 md:w-6 md:h-6 text-blue-600" />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Charts Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
               {/* Bookings Chart */}
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Bookings Comparison</h3>
-                <div className="h-80">
+              <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Monthly Bookings Comparison</h3>
+                <div className="h-60 md:h-80">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                       data={bookingData}
@@ -330,9 +349,9 @@ const HotelDashboard = () => {
               </div>
 
               {/* Profit Chart */}
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Monthly Profit Comparison</h3>
-                <div className="h-80">
+              <div className="bg-white rounded-xl shadow-sm p-4 md:p-6 border border-gray-100">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Monthly Profit Comparison</h3>
+                <div className="h-60 md:h-80">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart
                       data={profitData}
@@ -429,22 +448,39 @@ const HotelDashboard = () => {
       default: return "Dashboard overview";
     }
   };
+
   const handleLogout = () => {
-    
     console.log("User logged out");
     localStorage.removeItem('token'); 
     navigate('/login'); 
   };
+
   return (
     <div className="flex h-screen bg-gray-50">
-      {/* Sidebar */}
-      <div className="w-72 bg-white shadow-lg flex flex-col">
+      {/* Mobile Menu Button */}
+      {windowWidth <= 768 && (
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="fixed z-50 top-4 left-4 p-2 rounded-md bg-white shadow-md"
+        >
+          <Menu className="w-6 h-6 text-gray-600" />
+        </button>
+      )}
+
+      {/* Sidebar - Hidden on mobile unless menu is open */}
+      <div 
+        className={`w-72 bg-white shadow-lg flex flex-col fixed md:relative z-40 h-full transition-all duration-300 ease-in-out ${
+          windowWidth <= 768 
+            ? (isMobileMenuOpen ? "translate-x-0" : "-translate-x-full") 
+            : "translate-x-0"
+        }`}
+      >
         <div className="p-6 border-b">
           <h1 className="text-2xl font-bold text-gray-800">BILTON</h1>
           <p className="text-sm text-gray-500 mt-1">Management Dashboard</p>
         </div>
 
-        <nav className="flex-1 overflow-y-auto py-4">
+        <nav className="flex-1 overflow-y-auto py-4 ">
           {menuItems.map((category) => (
             <div key={category.category} className="mb-6">
               <h3 className="px-6 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
@@ -502,23 +538,31 @@ const HotelDashboard = () => {
         </div>
       </div>
 
+      {/* Overlay for mobile menu */}
+      {isMobileMenuOpen && windowWidth <= 768 && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Main Content */}
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="flex-1 flex flex-col overflow-hidden md:ml-0">
         {/* Header */}
         <header className="bg-white shadow-sm border-b border-gray-200">
-          <div className="px-6 py-4">
+          <div className="px-4 md:px-6 py-4">
             <div className="flex items-center justify-between">
-              <div className="h-18">
-                <h1 className="text-2xl font-bold text-gray-900">
+              <div className="h-18 pl-20 md:pl-0 ">
+                <h1 className="text-xl md:text-2xl font-bold text-gray-900">
                   {getViewTitle()}
                 </h1>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-xs md:text-sm text-gray-500 mt-1">
                   {getViewDescription()}
                 </p>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="relative">
+              <div className="flex items-center space-x-2 md:space-x-4">
+                <div className="relative hidden sm:block">
                   <input
                     type="text"
                     placeholder={
@@ -526,21 +570,21 @@ const HotelDashboard = () => {
                         ? "Search images..."
                         : `Search ${currentView}...`
                     }
-                    className="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-40 md:w-64 pl-8 md:pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
-                  <Search className="w-5 h-5 text-gray-400 absolute left-3 top-2.5" />
+                  <Search className="w-4 h-4 md:w-5 md:h-5 text-gray-400 absolute left-2 md:left-3 top-2.5" />
                 </div>
 
-                <button className="p-2 text-gray-400 hover:text-gray-600 relative">
-                  <MessageCircle className="w-6 h-6" />
+                <button className="p-2 text-gray-400 hover:text-gray-600 relative hidden md:block">
+                  <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
                 </button>
 
                 <button className="p-2 text-gray-400 hover:text-gray-600 relative">
-                  <Bell className="w-6 h-6" />
+                  <Bell className="w-5 h-5 md:w-6 md:h-6" />
                   <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
 
-                <div className="flex items-center space-x-2 bg-gray-50 rounded-lg p-2">
+                <div className="hidden md:flex items-center space-x-2 bg-gray-50 rounded-lg p-2">
                   <span className="text-sm font-medium text-gray-700">
                     BILTON
                   </span>
@@ -552,7 +596,7 @@ const HotelDashboard = () => {
         </header>
 
         {/* Dashboard Content */}
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto p-4 md:p-6">
           {renderMainContent()}
         </main>
       </div>
