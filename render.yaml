@@ -1,0 +1,8 @@
+type: static
+name: bilton
+staticPublishPath: build
+
+routes:
+  - type: rewrite
+    source: /*
+    destination: /index.html
