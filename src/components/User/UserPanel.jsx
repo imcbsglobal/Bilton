@@ -208,7 +208,7 @@ const handleLogout = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-[1300px] mx-auto px-6 py-8">
+      <main className="max-w-[1400px] mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="bg-white rounded-2xl shadow-sm p-6 mb-8 border border-gray-100">
           <div className="flex items-center justify-between">
