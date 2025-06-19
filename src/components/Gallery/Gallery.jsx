@@ -1,16 +1,38 @@
 import React,{useState} from 'react'
 import CurvedSlider from '../Gallery/CurvedSlider'
-
+import room1 from '../../assets/room1.jpg'
+import room2 from '../../assets/room2.png'
+import room3 from '../../assets/room3.png'
+import room4 from '../../assets/room4.png'
+import hotel from '../../assets/Homebanner.jpg'
+import reception from '../../assets/reception.png'
+import living from '../../assets/living.png'
+import dine from '../../assets/dine.jpg'
+import dine1 from '../../assets/dine1.png'
+import rec1 from '../../assets/rec1.png'
+import build from '../../assets/build.jpg'
+import build2 from '../../assets/build2.jpg'
+import build3 from '../../assets/build3.jpg'
+import build4 from '../../assets/build4.jpg'
+import dine3 from '../../assets/dine3.jpg'
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState('images');
 
   const images = [
-    "https://i.pinimg.com/originals/20/6e/34/206e347def37094bf77334675f432898.jpg",
-    "https://i.pinimg.com/originals/85/ad/e3/85ade307b1d7897efccb080f4b0823fc.jpg",
-    "https://avatars.mds.yandex.net/i?id=c126d0c57149e80f1cb4bab0d61145e9_l-5163033-images-thumbs&ref=rim&n=13&w=1900&h=1100",
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+    room1,
+    room2,
+    room3,
+    room4,
+    hotel,
+    reception,
+    living,
+    dine,
+    dine1,
+    dine3,
+    build,
+    build2,
+    build3,
+    build4
   ];
 
   const videos = [
@@ -37,7 +59,7 @@ const Gallery = () => {
       </section>
 
      <section>
-        <div className='max-w-[1400px] mx-auto mb-10'>
+        <div className='max-w-[1400px] mx-auto mb-10 px-2'>
             {/* Images/Videos Filter - Top Left */}
            
 

@@ -42,12 +42,12 @@ const Room = () => {
           </div>
 
           {/* Main heading with gradient */}
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-center text-[#06362E] boldText">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-center text-[#06362E] boldText pb-3 md:pb-0">
             dream stay
           </h1>
       
           {/* Hero image with parallax effect */}
-          <div className="relative w-full max-w-6xl mx-auto mb-20">
+          <div className="relative w-full max-w-6xl mx-auto mb-[400px] md:mb-40 ">
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-amber-200 h-80 md:h-96 lg:h-[500px]">
               <img
                 src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/44b75684118919.5d52806ed0805.jpg"
@@ -65,7 +65,7 @@ const Room = () => {
         </div>
         
         {/* Booking widget */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 md:bottom-16 w-full max-w-5xl mx-auto">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-8 md:bottom-16 w-full max-w-5xl mx-auto px-2 ">
           <div className="bg-emerald-900 rounded-2xl p-6 shadow-xl border border-amber-300">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               {/* Room selection */}

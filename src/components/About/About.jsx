@@ -209,7 +209,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section className="mb-16 px-2">
         <div className="max-w-[1400px] mx-auto h-[600px] w-full rounded-3xl bg-[#000] relative px-5 pb-5 flex items-end overflow-hidden">
           <div className="absolute top-0 bottom-0 left-0 right-0">
             <img
@@ -328,7 +328,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section className="mb-16 px-2">
         <div className="max-w-[1200px] flex flex-col justify-center items-center relative mx-auto w-full h-[300px] rounded-3xl overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.1)]">
           <div className="h-[300px] absolute top-0 bottom-0 left-0 right-0">
             <img

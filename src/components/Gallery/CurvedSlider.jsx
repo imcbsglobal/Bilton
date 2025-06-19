@@ -3,13 +3,36 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
-
+import room1 from '../../assets/room1.jpg'
+import room2 from '../../assets/room2.png'
+import room3 from '../../assets/room3.png'
+import room4 from '../../assets/room4.png'
+import hotel from '../../assets/Homebanner.jpg'
+import reception from '../../assets/reception.png'
+import living from '../../assets/living.png'
+import dine from '../../assets/dine.jpg'
+import dine1 from '../../assets/dine1.png'
+import rec1 from '../../assets/rec1.png'
+import build from '../../assets/build.jpg'
+import build2 from '../../assets/build2.jpg'
+import build3 from '../../assets/build3.jpg'
+import build4 from '../../assets/build4.jpg'
+import dine3 from '../../assets/dine3.jpg'
 const images = [
-  'https://avatars.mds.yandex.net/i?id=518b44dc418cf7f6664bd8c70b5d20b02b6df5a0-5697811-images-thumbs&n=13',
-  'https://avatars.mds.yandex.net/get-altay/1899063/2a0000016a69e31666453161ff0a6671ba57/XXL_height',
-  'https://i.pinimg.com/originals/72/fa/97/72fa97df342c0014409a80bda2e26990.jpg',
-  'https://avatars.mds.yandex.net/i?id=0b8016b06e84a8782d3af14f9a1fa1de_l-8282002-images-thumbs&ref=rim&n=13&w=2000&h=1415',
-  'https://avatars.mds.yandex.net/i?id=329fbcafb06f3d8925cf818c7f61e815_l-10507661-images-thumbs&ref=rim&n=13&w=3000&h=2000',
+   room1,
+   reception,
+    dine,
+    build,
+      room2,
+      hotel,
+      dine1,
+      build2,
+      living,
+      room3,
+      dine3,
+      build3,
+      room4,
+      build4
 ];
 
 const CurvedSlider = () => {

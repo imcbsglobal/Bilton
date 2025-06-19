@@ -97,9 +97,7 @@ const Home = () => {
         style={{ y: textY }}
         className="block text-sm text-center max-w-[700px] mx-auto smallText animate-fadeIn delay-700"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-        est, fugit harum sequi tenetur inventore consequuntur commodi sed
-        officia rem.
+        Discover a peaceful escape wrapped in elegance. Every detail is designed to soothe your senses and elevate your experience.
       </motion.div>
     </div>
     <motion.div 
