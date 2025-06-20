@@ -77,7 +77,7 @@ const CurvedSlider = () => {
       </Swiper>
 
       {/* Bottom curved mask */}
-      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white z-10 rounded-t-[100%_100px]"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white z-10 rounded-t-[100%_100px] mb-0"></div>
     </div>
   );
 };
