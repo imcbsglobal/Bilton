@@ -8,6 +8,14 @@ import { TbUsers } from "react-icons/tb";
 import { Search, Bed, Calendar, Users, ChevronDown } from 'lucide-react';
 import { useNavigate } from "react-router-dom"
 
+import img1 from "../../assets/image1.jpg"
+import img2 from "../../assets/image4.jpg"
+import img10 from "../../assets/image10.jpg"
+import img16 from "../../assets/image16.jpg"
+import img14 from "../../assets/image14.jpg"
+import { img } from 'framer-motion/client';
+
+
 const Room = () => {
   const [roomType, setRoomType] = useState('Luxury Suite');
   const [dates, setDates] = useState('May 10 - May 15, 2025');
@@ -19,14 +27,14 @@ const Room = () => {
   }
 
   const roomData = [
-    {name:"Master Bed Room", img : "https://www.johndickandson.co.uk/wp-content/uploads/2019/06/Aleal-15.jpg", visitors : 320, room:"1 extra-large double bed"},
-    {name:"Deluxe Double Room Room", img : "https://img.edilportale.com/product-thumbs/b_bed-with-upholstered-headboard-adora-572518-relcbb72ad.jpg", visitors : 320,room:"1 extra-large double bed"},
-    {name:"Double Room Room", img : "https://www.alesyamebel.ru/upload/iblock/82b/x56lauyudsxhqjj0cjzhydslvvy8azbzn.jpeg.pagespeed.ic.x8pIFoq1_l.jpg", visitors : 320,room:"1 extra-large double bed"},
-    {name:"Budget Double Room Room", img : "https://img.goodfon.ru/wallpaper/nbig/0/2a/interer-stil-dizain-komnata-roskoshnaia-spalnia.webp", visitors : 320,room:"1 extra-large double bed"},
-    {name:"Master Bed Room", img : "https://avatars.mds.yandex.net/i?id=b46a11b664c69c7354fdab44bf5b60c66c35c30d-5668792-images-thumbs&n=13", visitors : 320,room:"1 extra-large double bed"},
-    {name:"Master Bed Room", img : "https://assets-news.housing.com/news/wp-content/uploads/2022/03/09211415/Modern-bedroom-lighting-ideas-Enhance-the-interiors-with-lights-for-your-bedroom.jpg", visitors : 320,room:"1 extra-large double bed"},
-    {name:"Master Bed Room", img : "https://avatars.mds.yandex.net/i?id=ef2780716fa8f23bcd49d334fd381a90-4054844-images-thumbs&n=13", visitors : 320,room:"1 extra-large double bed"},
-    {name:"Master Bed Room", img : "https://i.pinimg.com/originals/18/f0/12/18f012da5970d208362a99d31821be7f.jpg", visitors : 320,room:"1 extra-large double bed"},
+    {name:"Standard ", img : img1, visitors : 320, room:"1 extra-large double bed"},
+    {name:"Deluxe ", img : img14, visitors : 320,room:"1 extra-large double bed"},
+    {name:"Executive", img : img10, visitors : 320,room:"1 extra-large double bed"},
+    {name:"Executive triple", img : img16, visitors : 320,room:"1 extra-large double bed"},
+    {name:"Studio", img : img2, visitors : 320,room:"1 extra-large double bed"},
+    //{name:"Master Bed Room", img : "https://assets-news.housing.com/news/wp-content/uploads/2022/03/09211415/Modern-bedroom-lighting-ideas-Enhance-the-interiors-with-lights-for-your-bedroom.jpg", visitors : 320,room:"1 extra-large double bed"},
+    //{name:"Master Bed Room", img : "https://avatars.mds.yandex.net/i?id=ef2780716fa8f23bcd49d334fd381a90-4054844-images-thumbs&n=13", visitors : 320,room:"1 extra-large double bed"},
+    //{name:"Master Bed Room", img : "https://i.pinimg.com/originals/18/f0/12/18f012da5970d208362a99d31821be7f.jpg", visitors : 320,room:"1 extra-large double bed"},
   ]
   return (
     <div className="">

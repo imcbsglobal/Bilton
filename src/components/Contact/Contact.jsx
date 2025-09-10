@@ -198,11 +198,11 @@ const Contact = () => {
                   <div className="flex flex-col">
                     <span className="font-bold text-lg text-[#06362E]">Phone</span>
                     <span className="italic text-[#06362E] font-medium">
-                      <a href="tel:+918946873479" className="hover:underline">+91 8946 873 479</a>
+                      <a href="tel:+918946873479" className="hover:underline">+91 88844 11190</a>
                     </span>
-                    <span className="italic text-[#06362E] font-medium">
+                    {/* <span className="italic text-[#06362E] font-medium">
                       <a href="tel:+917882938938" className="hover:underline">+91 7882 938 938</a>
-                    </span>
+                    </span> */}
                   </div>
                 </div>
                 
@@ -212,8 +212,9 @@ const Contact = () => {
                   </div>
                   <div className="flex flex-col">
                     <span className="font-bold text-lg text-[#06362E]">Address</span>
-                    <span className="italic text-[#06362E] font-medium">ABCD, street No:194</span>
-                    <span className="italic text-[#06362E] font-medium">Luxury District, City</span>
+                    <span className="italic text-[#06362E] font-medium">61, Lakkasandra Bus Stop,</span>
+                    <span className="italic text-[#06362E] font-medium">13th Cross, Hosur main Road</span>
+                    <span className="italic text-[#06362E] font-medium">Wilson Garden, Bengaluru-560027</span>
                   </div>
                 </div>
                 
@@ -246,7 +247,7 @@ const Contact = () => {
         <div className="max-w-[1400px] mx-auto px-2 md:px-6">
           <div className="w-full h-96 bg-gray-200 rounded-3xl overflow-hidden shadow-lg">
             {/* Replace with actual map component or embed */}
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.3094304525775!2d76.0791381748697!3d11.601274488602131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6732c43f035c1%3A0xc2dd278a1f8339e5!2sHotel%20Food%20Paradise!5e0!3m2!1sen!2sin!4v1746696544517!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3888.4225106618806!2d77.59407017507596!3d12.944793887368057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzQxLjMiTiA3N8KwMzUnNDcuOSJF!5e0!3m2!1sen!2sin!4v1757496582934!5m2!1sen!2sin" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>

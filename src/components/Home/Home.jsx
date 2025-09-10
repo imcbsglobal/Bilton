@@ -19,7 +19,17 @@ import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import room1 from '../../assets/image1.jpg'
+import room2 from '../../assets/image16.jpg'
+import room3 from '../../assets/image3.jpg'
+import room4 from '../../assets/image4.jpg'
+import hotel from '../../assets/image5.jpg'
+import reception from '../../assets/image6.jpg'
+import living from '../../assets/image7.jpg'
+import dine from '../../assets/image8.jpg'
+import dine1 from '../../assets/image9.jpg'
+import rec1 from '../../assets/image10.jpg'
+import build from '../../assets/image11.jpg'
 
 SwiperCore.use([Autoplay]);
 
@@ -121,28 +131,28 @@ const Home = () => {
               <div className="flex pr-2 scrollbar w-full gap-5 mb-7 overflow-auto whitespace-nowrap flex-shrink-0">
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src="https://i.pinimg.com/originals/bd/61/c2/bd61c2a299e4b9a171d3a94f00f20b5e.jpg"
+                    src={room2}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src="https://i.pinimg.com/736x/3b/1c/ab/3b1cab97dd30791589a9938b6611779e.jpg"
+                    src={room3}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src="https://avatars.mds.yandex.net/i?id=8aa00eb9b234b1025af1cafe38905bc7_l-5291151-images-thumbs&ref=rim&n=13&w=1700&h=1135"
+                    src={room4}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src="https://avatars.mds.yandex.net/i?id=8aa00eb9b234b1025af1cafe38905bc7_l-5291151-images-thumbs&ref=rim&n=13&w=1700&h=1135"
+                    src={room1}
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -157,10 +167,7 @@ const Home = () => {
             {/* Right */}
             <div className="md:w-[30%] px-2 md:px-0">
               <div className="mb-10">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit hic repudiandae et quia vero laboriosam aliquam omnis
-                perferendis nobis in quae eveniet, rem, voluptatibus enim eaque
-                fugit distinctio. Dolorem, corrupti.
+                I really enjoyed my stay at Bilton Hotel. The rooms were clean and comfortable, the staff was very friendly, and the food was great. Would definitely stay here again.
               </div>
               <div className="flex items-center gap-5 mb-10">
                 <ul className="flex items-center justify-between w-full relative">
@@ -223,7 +230,7 @@ const Home = () => {
         </div>
         <div className="max-w-[1400px] mx-auto pt-16 md:pt-0 md:py-16 rounded-3xl px-2 lg:px-20 w-full">
           <div className="text-center mb-10 font-bold boldText text-5xl md:text-5xl text-[#06362E]">
-            Lorem Ipsum Lorem <span className="block">ipsum dolor sit</span>
+            WHERE ELEGANCE  <span className="block">feels like HOME</span>
           </div>
           {/* Rooms */}
           <Swiper
@@ -250,7 +257,7 @@ const Home = () => {
             {[...Array(3)].map((_, index) => (
               <SwiperSlide key={index} className='w-full'>
                 <div className="w-full h-[400px] rounded-3xl relative shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] px-2 py-2 overflow-hidden bg-[#06362E]">
-                  <div className="h-[70%] w-full rounded-3xl overflow-hidden">
+                  <div className="h-[100%] w-full rounded-3xl overflow-hidden">
                     <img
                       src={
                         index === 0
@@ -264,17 +271,17 @@ const Home = () => {
                     />
                   </div>
                   <div className="py-2 px-3">
-                    <div className="mb-1 font-bold boldText text-[#E2C686]">
-                      Room Name
-                    </div>
-                    <div className="text-sm text-[#fff3d7]">
+                    {/* <div className="mb-1 font-bold boldText text-[#E2C686]">
+                      Executive
+                    </div> */}
+                    {/* <div className="text-sm text-[#fff3d7]">
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                       Tempore optio doloribus, nemo excepturi minus voluptatem!
-                    </div>
+                    </div> */}
                   </div>
-                  <div className="absolute bottom-5 right-5 p-2 text-xl rounded-full bg-[#E2C686] text-[#06362E]">
+                  {/* <div className="absolute bottom-5 right-5 p-2 text-xl rounded-full bg-[#E2C686] text-[#06362E]">
                     <FaArrowRight />
-                  </div>
+                  </div> */}
                 </div>
               </SwiperSlide>
             ))}
@@ -311,7 +318,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col absolute bottom-2 px-10 z-10">
                   <div className="boldText font-bold text-2xl relative z-10   text-[#fff]">
-                    Home Stay
+                    Executive
                   </div>
                   <div className="text-sm text-[#fff]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -332,7 +339,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col absolute bottom-2 px-10 z-10">
                   <div className="boldText font-bold text-2xl relative z-10   text-[#fff]">
-                    Home Stay
+                    Deluxe
                   </div>
                   <div className="text-sm text-[#fff]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -620,7 +627,7 @@ const Home = () => {
             <div className="w-[250px] mx-auto h-[250px] bg-[#fff] m-auto rounded-full overflow-hidden">
               <iframe
                 className="w-full h-full object-cover"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62529.631129750036!2d76.04461557075668!3d11.616081628472966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6733459fb33d7%3A0xa5b953217a9fc043!2sKalpetta%2C%20Kerala%2C%20India!5e0!3m2!1sen!2snl!4v1745922003269!5m2!1sen!2snl"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3888.4225106618806!2d77.59407017507596!3d12.944793887368057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzQxLjMiTiA3N8KwMzUnNDcuOSJF!5e0!3m2!1sen!2sin!4v1757496582934!5m2!1sen!2sin"
                 loading="lazy"
               ></iframe>
             </div>
