@@ -22,7 +22,7 @@ import { useInView } from 'react-intersection-observer';
 import room1 from '../../assets/image1.jpg'
 import room2 from '../../assets/image16.jpg'
 import room3 from '../../assets/image3.jpg'
-import room4 from '../../assets/image4.jpg'
+import room4 from '../../assets/image4.JPG'
 import hotel from '../../assets/image5.jpg'
 import reception from '../../assets/image6.jpg'
 import living from '../../assets/image7.jpg'
