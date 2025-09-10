@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import CurvedSlider from '../Gallery/CurvedSlider'
-import room1 from '../../assets/image4.jpg'
+import room1 from '../../assets/image6.jpg'
 import room2 from '../../assets/image24.jpeg'
 import room3 from '../../assets/image2.jpg'
 import room4 from '../../assets/image4.jpg'
