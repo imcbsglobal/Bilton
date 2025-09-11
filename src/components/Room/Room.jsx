@@ -8,12 +8,6 @@ import { TbUsers } from "react-icons/tb";
 import { Search, Bed, Calendar, Users, ChevronDown } from 'lucide-react';
 import { useNavigate } from "react-router-dom"
 
-import img1 from "../../assets/image1.jpg"
-import img2 from "../../assets/image4.jpg"
-import img10 from "../../assets/image10.jpg"
-import img16 from "../../assets/image16.jpg"
-import img14 from "../../assets/image14.jpg"
-import { img } from 'framer-motion/client';
 
 
 const Room = () => {
@@ -27,11 +21,11 @@ const Room = () => {
   }
 
   const roomData = [
-    {name:"Standard ", img : img1, visitors : 320, room:"1 extra-large double bed"},
-    {name:"Deluxe ", img : img14, visitors : 320,room:"1 extra-large double bed"},
-    {name:"Executive", img : img10, visitors : 320,room:"1 extra-large double bed"},
-    {name:"Executive triple", img : img16, visitors : 320,room:"1 extra-large double bed"},
-    {name:"Studio", img : img2, visitors : 320,room:"1 extra-large double bed"},
+    {name:"Standard", img : "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564115/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_smieew.jpg", visitors : 320, room:"1 extra-large double bed"},
+    {name:"Deluxe", img : "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565475/WhatsApp_Image_2025-09-11_at_9.59.50_AM_sshsdz.jpg", visitors : 320,room:"1 extra-large double bed"},
+    {name:"Executive", img : "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564101/WhatsApp_Image_2025-09-11_at_9.31.52_AM_qkk2a4.jpg", visitors : 320,room:"1 extra-large double bed"},
+    {name:"Executive triple", img : "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564104/WhatsApp_Image_2025-09-11_at_9.31.51_AM_1_akvwbt.jpg", visitors : 320,room:"1 extra-large double bed"},
+    {name:"Studio", img : "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg", visitors : 320,room:"1 extra-large double bed"},
     //{name:"Master Bed Room", img : "https://assets-news.housing.com/news/wp-content/uploads/2022/03/09211415/Modern-bedroom-lighting-ideas-Enhance-the-interiors-with-lights-for-your-bedroom.jpg", visitors : 320,room:"1 extra-large double bed"},
     //{name:"Master Bed Room", img : "https://avatars.mds.yandex.net/i?id=ef2780716fa8f23bcd49d334fd381a90-4054844-images-thumbs&n=13", visitors : 320,room:"1 extra-large double bed"},
     //{name:"Master Bed Room", img : "https://i.pinimg.com/originals/18/f0/12/18f012da5970d208362a99d31821be7f.jpg", visitors : 320,room:"1 extra-large double bed"},

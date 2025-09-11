@@ -19,17 +19,7 @@ import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import room1 from '../../assets/image1.jpg'
-import room2 from '../../assets/image16.jpg'
-import room3 from '../../assets/image3.jpg'
-import room4 from '../../assets/image4.JPG'
-import hotel from '../../assets/image5.jpg'
-import reception from '../../assets/image6.jpg'
-import living from '../../assets/image7.jpg'
-import dine from '../../assets/image8.jpg'
-import dine1 from '../../assets/image9.jpg'
-import rec1 from '../../assets/image10.jpg'
-import build from '../../assets/image11.jpg'
+
 
 SwiperCore.use([Autoplay]);
 
@@ -131,28 +121,28 @@ const Home = () => {
               <div className="flex pr-2 scrollbar w-full gap-5 mb-7 overflow-auto whitespace-nowrap flex-shrink-0">
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src={room2}
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564115/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_smieew.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src={room3}
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564112/WhatsApp_Image_2025-09-11_at_9.31.51_AM_zbtrhi.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src={room4}
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564111/WhatsApp_Image_2025-09-11_at_9.31.50_AM_1_ycdoe2.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
-                    src={room1}
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -261,10 +251,10 @@ const Home = () => {
                     <img
                       src={
                         index === 0
-                          ? "https://media.cntraveler.com/photos/53dabff3dcd5888e145ca051/master/w_1200,c_limit/eccleston-square-hotel-london-england-2-113144.jpg"
+                          ? "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.46_AM_zmkrxc.jpg"
                           : index === 1
-                          ? "https://avatars.yandex.net/get-music-content/103235/e81336ad.a.7205355-1/m1000x1000?webp=false"
-                          : "https://roofhotels.com.tr/wp-content/uploads/2022/06/dnm-1.jpg"
+                          ? "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564097/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_-_Copy_a61u4x.jpg"
+                          : "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564096/WhatsApp_Image_2025-09-11_at_9.31.53_AM_w714cl.jpg"
                       }
                       alt=""
                       className="w-full h-full object-cover"
@@ -296,7 +286,7 @@ const Home = () => {
             <div className="col-span-4 w-full h-[450px] bg-[#000] overflow-hidden rounded-3xl relative">
               <div className="absolute top-0 left-0 right-0 bottom-0">
                 <img
-                  src="https://avatars.mds.yandex.net/get-altay/2389272/2a000001764c9e2d4d76abfe0fc90fd6208f/XXL_height"
+                  src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg"
                   alt=""
                   className="w-full h-full object-cover"
                 />
