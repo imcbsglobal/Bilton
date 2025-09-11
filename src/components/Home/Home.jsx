@@ -317,7 +317,7 @@ const Home = () => {
                 </div>
                 <div className="absolute top-0 bottom-0 left-0 right-0">
                   <img
-                    src="https://image.winudf.com/v2/image/Y29tLmFwbmFmYXNoaW9uLmJlZHJvb21kZXNpZ25fc2NyZWVuXzRfMTUzOTg1ODMwN18wMTE/screen-4.jpg?fakeurl=1&type=.jpg"
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757565475/WhatsApp_Image_2025-09-11_at_9.59.50_AM_sshsdz.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -338,7 +338,7 @@ const Home = () => {
                 </div>
                 <div className="absolute top-0 bottom-0 left-0 right-0">
                   <img
-                    src="https://i.pinimg.com/originals/92/42/6a/92426a43fd391f5ca2d73b4ac862b23a.jpg"
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757565433/WhatsApp_Image_2025-09-11_at_9.50.24_AM_cfx0c5.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -406,7 +406,7 @@ const Home = () => {
               <div className="h-[320px] w-full bg-[#000] relative rounded-3xl mb-5 overflow-hidden">
                 <div className="absolute top-0 bottom-0 left-0 right-0">
                   <img
-                    src="https://th-i.thgim.com/public/migration_catalog/article13801800.ece/alternates/FREE_1200/03MPNATTIKABEACH1"
+                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564101/WhatsApp_Image_2025-09-11_at_9.31.52_AM_qkk2a4.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
@@ -634,7 +634,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-[#00000042] z-10"></div>
           <div className="absolute top-0 bottom-0 left-0 right-0 w-full">
             <img
-              src="https://twobadtourists.com/wp-content/uploads/2024/08/caro-2.jpg"
+              src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757565433/WhatsApp_Image_2025-09-11_at_9.50.24_AM_cfx0c5.jpg"
               alt=""
               className="w-full h-full object-cover"
             />
