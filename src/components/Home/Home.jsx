@@ -1,5 +1,6 @@
-import React, {useRef} from 'react'
-import homeBanner from "../../assets/homeBanner.png"
+import React, { useRef } from 'react'
+import homeVideo from "../../assets/BILTON_BANNER.mp4";
+import homeVideo2 from "../../assets/BILTON_BANNER2.mp4";
 import { FiSearch } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
 import demo from "../../assets/bannerbg.png"
@@ -17,12 +18,13 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import SwiperCore from 'swiper';
 import { Autoplay } from 'swiper/modules';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { color, motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
+import image29 from "../../assets/image29.JPG";
+import image30 from "../../assets/image30.JPG";
+import image31 from "../../assets/image31.JPG";
 
 SwiperCore.use([Autoplay]);
-
 
 const Home = () => {
   const sectionRef = useRef(null);
@@ -31,10 +33,10 @@ const Home = () => {
     offset: ["start start", "end start"]
   });
 
-  // Parallax effect for the image (zooms in as you scroll)
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  // Parallax effect for the video
+  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
   
-  // Parallax effect for the text (moves up as you scroll)
+  // Parallax effect for the text
   const textY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   
   // Fade in animation when section comes into view
@@ -42,75 +44,82 @@ const Home = () => {
     threshold: 0.3,
     triggerOnce: true
   });
+
   const roomsData = [
-      {name : "Master Bed", img : "https://media.cntraveler.com/photos/53dabff3dcd5888e145ca051/master/w_1200,c_limit/eccleston-square-hotel-london-england-2-113144.jpg", desc : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro! Maiores impedit quas quis, voluptatem minus nostrum deserunt beatae, corporis dolorem consequatur quidem minima in dolores eum provident iste sequi?"},
-      {name : "Master Bed", img : "", desc : ""},
-      {name : "Master Bed", img : "", desc : ""},
+    { name: "Master Bed", img: "https://media.cntraveler.com/photos/53dabff3dcd5888e145ca051/master/w_1200,c_limit/eccleston-square-hotel-london-england-2-113144.jpg", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro! Maiores impedit quas quis, voluptatem minus nostrum deserunt beatae, corporis dolorem consequatur quidem minima in dolores eum provident iste sequi?" },
+    { name: "Master Bed", img: "", desc: "" },
+    { name: "Master Bed", img: "", desc: "" },
   ]
-   
+
   return (
     <div className="overflow-hidden">
-    <section 
-    ref={sectionRef}
-    className="homeBannerBg lg:mb-20 flex flex-col mb-10 md:mb-0 items-center h-screen w-full relative overflow-hidden"
-  >
-    <div className="pt-[140px] px-2 z-10">
-      <motion.div 
-        ref={textRef}
-        initial={{ opacity: 0, y: 20 }}
-        animate={textInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        style={{ y: textY }}
-        className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E] overflow-hidden"
+      {/* Banner Section */}
+      <section
+        ref={sectionRef}
+        className="homeBannerBg lg:mb-20 flex flex-col mb-10 md:mb-0 items-center h-screen w-full relative overflow-hidden"
       >
-        <div className="animate-slideUp">
-          <span className="inline-block overflow-hidden">
-            {Array.from("Where Serenity Meets").map((char, i) => (
-              <span
-                key={`char-${i}`}
-                className="inline-block animate-letterReveal"
-                style={{ animationDelay: `${i * 0.05}s` }}
-              >
-                {char === " " ? "\u00A0" : char}
+        <div className="pt-[140px] px-2 z-10">
+          <motion.div
+            ref={textRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={textInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            style={{ y: textY }}
+            className="text-5xl lg:text-6xl font-bold text-center mb-5 boldText text-[#06362E] overflow-hidden"
+          >
+            {/* <div className="animate-slideUp">
+              <span className="inline-block overflow-hidden">
+                {Array.from("Where Serenity Meets").map((char, i) => (
+                  <span
+                    key={`char-${i}`}
+                    className="inline-block animate-letterReveal"
+                    style={{ animationDelay: `${i * 0.05}s` }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                ))}
               </span>
-            ))}
-          </span>
-        </div>
-        <div className="animate-slideUp block">
-          <span className="inline-block overflow-hidden">
-            {Array.from("Luxury").map((char, i) => (
-              <span
-                key={`char2-${i}`}
-                className="inline-block animate-letterReveal"
-                style={{ animationDelay: `${i * 0.05 + 0.2}s` }}
-              >
-                {char === " " ? "\u00A0" : char}
+            </div> */}
+            {/* <div className="animate-slideUp block">
+              <span className="inline-block overflow-hidden">
+                {Array.from("Luxury").map((char, i) => (
+                  <span
+                    key={`char2-${i}`}
+                    className="inline-block animate-letterReveal"
+                    style={{ animationDelay: `${i * 0.05 + 0.2}s` }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                ))}
               </span>
-            ))}
-          </span>
+            </div> */}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={textInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            style={{ y: textY }}
+            className="block text-sm text-center max-w-[700px] mx-auto smallText animate-fadeIn delay-700"
+          >
+            {/* Discover a peaceful escape wrapped in elegance. Every detail is designed to soothe your senses and elevate your experience. */}
+          </motion.div>
         </div>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={textInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        style={{ y: textY }}
-        className="block text-sm text-center max-w-[700px] mx-auto smallText animate-fadeIn delay-700"
-      >
-        Discover a peaceful escape wrapped in elegance. Every detail is designed to soothe your senses and elevate your experience.
-      </motion.div>
-    </div>
-    <motion.div 
-      style={{ scale: imageScale }}
-      className="lg:absolute bottom-0 h-[450px] left-0 right-0 w-full"
-    >
-      <img
-        src={homeBanner}
-        alt="Luxury hotel banner"
-        className="w-full h-full object-contain lg:bottom-[-30px] lg:bottom-0"
-      />
-    </motion.div>
-</section>
+
+        {/* Background Video */}
+        <motion.div
+          style={{ scale: videoScale }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <video
+            src={homeVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+      </section>
 
       <section className="mb-0 md:mb-10 w-full">
         <div className="max-w-[1400px] mx-auto w-full">
@@ -118,7 +127,30 @@ const Home = () => {
             {/* Left */}
             <div className="md:w-[70%]">
               {/* Slider */}
+              
               <div className="flex pr-2 scrollbar w-full gap-5 mb-7 overflow-auto whitespace-nowrap flex-shrink-0">
+                <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
+                    <img
+                      src={image29}
+                      alt="Gallery"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
+                    <img
+                      src={image30}
+                      alt="Gallery"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
+                    <img
+                      src={image31}
+                      alt="Gallery"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
                     src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564115/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_smieew.jpg"
@@ -126,6 +158,8 @@ const Home = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
+                
+                
                 <div className="w-[300px] h-[200px] rounded-2xl bg-[#000] overflow-hidden flex-shrink-0">
                   <img
                     src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564112/WhatsApp_Image_2025-09-11_at_9.31.51_AM_zbtrhi.jpg"
@@ -280,76 +314,6 @@ const Home = () => {
       </section>
 
       <section className="mb-10 lg:mb-20">
-        <div className="max-w-[1200px] w-full mx-auto flex flex-col justify-center items-center px-2">
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-5 w-full">
-            {/* left */}
-            <div className="col-span-4 w-full h-[450px] bg-[#000] overflow-hidden rounded-3xl relative">
-              <div className="absolute top-0 left-0 right-0 bottom-0">
-                <img
-                  src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg"
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className=" absolute bottom-0 left-0 right-0 inset-0 bg-[#00000030]"></div>
-              <div className="absolute z-10 w-[250px] h-[150px] px-5 py-5 rounded-3xl bg-[#00000036] text-[#fff] right-2 top-2 backdrop-blur-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-                dolor dolores dolore tenetur eveniet
-              </div>
-              <div className="absolute bottom-10 left-10 text-4xl md:text-5xl boldText text-[#fff] font-bold leading-tight">
-                Your Comfort <span className="block">Outside Home</span>
-              </div>
-            </div>
-            {/* right */}
-            <div className="flex flex-col gap-5 w-full col-span-4 md:col-span-2">
-              <div className="w-full h-[215px] rounded-3xl bg-[#000] relative overflow-hidden">
-                <div className="absolute right-3 top-3 z-10 p-2 bg-[#06362E] text-[#E2C686] rounded-full shadow-sm">
-                  <MdArrowOutward />
-                </div>
-                <div className="flex flex-col absolute bottom-2 px-10 z-10">
-                  <div className="boldText font-bold text-2xl relative z-10   text-[#fff]">
-                    Executive
-                  </div>
-                  <div className="text-sm text-[#fff]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quaerat, quasi.
-                  </div>
-                </div>
-                <div className="absolute top-0 bottom-0 left-0 right-0">
-                  <img
-                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757565475/WhatsApp_Image_2025-09-11_at_9.59.50_AM_sshsdz.jpg"
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="w-full h-[215px] rounded-3xl bg-[#000] relative overflow-hidden">
-                <div className="absolute right-3 top-3 z-10 p-2 bg-[#06362E] text-[#E2C686] rounded-full shadow-sm">
-                  <MdArrowOutward />
-                </div>
-                <div className="flex flex-col absolute bottom-2 px-10 z-10">
-                  <div className="boldText font-bold text-2xl relative z-10   text-[#fff]">
-                    Deluxe
-                  </div>
-                  <div className="text-sm text-[#fff]">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quaerat, quasi.
-                  </div>
-                </div>
-                <div className="absolute top-0 bottom-0 left-0 right-0">
-                  <img
-                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757565433/WhatsApp_Image_2025-09-11_at_9.50.24_AM_cfx0c5.jpg"
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mb-10 lg:mb-20">
         <div className="max-w-[1400px] mx-auto">
           <div className="md:flex justify-center gap-10 w-full px-2 lg:px-10">
             {/* Left */}
@@ -403,53 +367,22 @@ const Home = () => {
             </div>
             {/* Right */}
             <div className="md:w-[60%] h-full">
-              <div className="h-[320px] w-full bg-[#000] relative rounded-3xl mb-5 overflow-hidden">
+              <div className="h-[580px] w-full bg-[#000] relative rounded-3xl overflow-hidden">
                 <div className="absolute top-0 bottom-0 left-0 right-0">
-                  <img
-                    src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564101/WhatsApp_Image_2025-09-11_at_9.31.52_AM_qkk2a4.jpg"
-                    alt=""
+                  <video
+                    src={homeVideo2}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="relative text-[#fff] boldText text-3xl px-10 pt-10">
-                  Exceptional Properties Located in Stunning Surrounding
-                </div>
+                <div className="absolute inset-0 bg-[#00000030]"></div>
                 <div className="flex px-10 absolute bottom-10">
                   <div className="px-6 flex gap-2 items-center text-sm relative py-2 rounded-full bg-[#E2C686] text-[#06362E] font-bold boldText">
                     Show Top-Rated Villas <FaArrowRight />
                   </div>
-                </div>
-              </div>
-              <div className="relative mb-5 flex justify-between px-10 text-xl bg-[#06362E] font-semibold text-[#E2C686] py-3 rounded-full">
-                <div>2000 +</div>
-                <div>Unique Places</div>
-              </div>
-              <div className="flex justify-center items-center gap-5">
-                <div className="w-full h-[200px] rounded-3xl relative bg-[#000] overflow-hidden">
-                  <div className="w-full h-[200px] absolute top-0 bottom-0 left-0 right-0">
-                    <img
-                      src="https://i.ytimg.com/vi/VuhxBe-wyYM/maxresdefault.jpg"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="relative px-5 py-5 boldText text-[#fff] flex items-end h-full z-20 justify-end">
-                    Recommended Places
-                  </div>
-                  <div className="inset-0 bg-[#0000005d] absolute"></div>
-                </div>
-                <div className="w-full h-[200px] rounded-3xl relative bg-[#000] overflow-hidden">
-                  <div className="w-full h-[200px] absolute top-0 bottom-0 left-0 right-0">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Munnar_hillstation_kerala.jpg/1200px-Munnar_hillstation_kerala.jpg"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="relative px-5 py-5 boldText text-[#fff] flex items-end h-full z-20 justify-end">
-                    Recommended Places
-                  </div>
-                  <div className="inset-0 bg-[#0000005d] absolute"></div>
                 </div>
               </div>
             </div>

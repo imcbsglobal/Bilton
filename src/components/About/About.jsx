@@ -8,16 +8,17 @@ import bgShade from "../../assets/bgshade.png"
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import { CheckCircle, Star, Shield, Sparkles } from 'lucide-react';
+import image29 from "../../assets/image29.JPG";
+import image31 from "../../assets/image31.JPG";
+import image32 from "../../assets/image32.JPG";
+
 
 const About = () => {
   const aboutData = [
-    { img : "https://img-new.cgtrader.com/items/47716/4e076435c4/modern-bedroom-3d-model-max.jpg" },
-    { img : "https://avatars.mds.yandex.net/i?id=f3792c41e492c9c9ba1c28b815b6d0ae_l-4257007-images-thumbs&ref=rim&n=13&w=1500&h=911" },
-    { img : "https://citygrowsys.com/webcontent/images/solutions/hotel-guest-room-management.jpg" },
-    { img : "https://cdnb.artstation.com/p/assets/images/images/037/137/685/large/kami-interier2-2-gigapixel-scale-2-00x.jpg?1619594019" },
-    // { img : "https://oboi-plenka.ru/image/cache/catalog/divino/6/647869674-fotooboi-d2-061-divino-volny-obaemnye-3-m-h-2-7-m-1200x800.jpg" },
-    { img : "https://avatars.mds.yandex.net/i?id=be180821b2e9d71357bf6e65e26b2efc_l-7544543-images-thumbs&ref=rim&n=13&w=1550&h=1550" },
-    { img : "https://citygrowsys.com/webcontent/images/solutions/hotel-guest-room-management.jpg" }
+    { img: image29 },
+    { img: image31 },
+    { img: image32 },
+    
   ]
 
   const featuress = [
