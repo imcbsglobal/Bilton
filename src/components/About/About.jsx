@@ -114,7 +114,7 @@ const About = () => {
             <div className="boldText text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-center text-[#06362E] font-semibold mb-5 overflow-hidden">
               <div className="animate-slideUp delay-100 opacity-0">
                 <span className="inline-block overflow-hidden">
-                  {Array.from("Explore Our Mission and").map((char, i) => (
+                  {Array.from("Welcome to Your Home ").map((char, i) => (
                     <span
                       key={`char-${i}`}
                       className="inline-block animate-letterReveal"
@@ -127,7 +127,7 @@ const About = () => {
               </div>
               <div className="animate-slideUp delay-300 opacity-0 block">
                 <span className="inline-block overflow-hidden">
-                  {Array.from("Values in Comfort-Driven").map((char, i) => (
+                  {Array.from("Away from Home").map((char, i) => (
                     <span
                       key={`char2-${i}`}
                       className="inline-block animate-letterReveal"
@@ -138,25 +138,12 @@ const About = () => {
                   ))}
                 </span>
               </div>
-              <div className="animate-slideUp delay-500 opacity-0">
-                <span className="inline-block overflow-hidden">
-                  {Array.from("Hospitality Solutions").map((char, i) => (
-                    <span
-                      key={`char3-${i}`}
-                      className="inline-block animate-letterReveal"
-                      style={{ animationDelay: `${i * 0.05 + 0.4}s` }}
-                    >
-                      {char === " " ? "\u00A0" : char}
-                    </span>
-                  ))}
-                </span>
-              </div>
+              
             </div>
 
             {/* Description with fade-in */}
             <div className="max-w-[600px] mx-auto text-center mb-5 animate-fadeIn delay-700 opacity-0">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat,
-              quia Lorem ipsum dolor sit amet.
+              Enjoy a warm and relaxing stay with modern comforts and friendly hospitality, making every moment feel just like home.
             </div>
 
             {/* Button with subtle scale animation */}

@@ -184,14 +184,14 @@ const Home = () => {
               </div>
               {/* Content */}
               <div className="boldText text-5xl font-bold px-2 md:px-0 mb-2 md:mb-0">
-                Unlock the Art of{" "}
-                <span className="block">Sophisticated Stays</span>
+                Your Perfect Stay Awaits{" "}
+                <span className="block"></span>
               </div>
             </div>
             {/* Right */}
             <div className="md:w-[30%] px-2 md:px-0">
               <div className="mb-10">
-                I really enjoyed my stay at Bilton Hotel. The rooms were clean and comfortable, the staff was very friendly, and the food was great. Would definitely stay here again.
+                Bilton Hotel offers clean and comfortable rooms designed for a relaxing stay. Guests can enjoy delicious dining options with a variety of cuisines prepared fresh daily. The hotel provides excellent hospitality with friendly staff to assist at any time. With well-maintained interiors and quality service, Bilton Hotel ensures a pleasant and memorable experience for every guest.
               </div>
               <div className="flex items-center gap-5 mb-10">
                 <ul className="flex items-center justify-between w-full relative">
@@ -254,7 +254,7 @@ const Home = () => {
         </div>
         <div className="max-w-[1400px] mx-auto pt-16 md:pt-0 md:py-16 rounded-3xl px-2 lg:px-20 w-full">
           <div className="text-center mb-10 font-bold boldText text-5xl md:text-5xl text-[#06362E]">
-            WHERE ELEGANCE  <span className="block">feels like HOME</span>
+            Your Home Away From Home   <span className="block"></span>
           </div>
           {/* Rooms */}
           <Swiper
@@ -318,15 +318,12 @@ const Home = () => {
           <div className="md:flex justify-center gap-10 w-full px-2 lg:px-10">
             {/* Left */}
             <div className="md:w-[40%] h-full">
-              <div className="text-5xl lg:text-8xl font-bold boldText mb-5 md:mb-10 text-[#06362E]">
-                Inspiring <span className="block">Locations</span>{" "}
-                <span className="block">to Lodge</span>
+              <div className="text-5xl lg:text-5xl font-bold boldText mb-5 md:mb-10 text-[#06362E]">
+                Home-Like Comfort <span className="block">Hotel-Style Elegance</span>{" "}
+                <span className="block"></span>
               </div>
               <div className="mb-5 md:mb-10 text-[#06362E]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
-                culpa autem odio obcaecati at deleniti iste sapiente minus, odit
-                praesentium! Molestias quos nulla ullam eius velit expedita
-                sequi commodi quas!
+                Bilton Hotel offers comfort, care, and warm hospitality. A place where every stay feels just like home.
               </div>
               <div className="relative flex items-center mb-5 md:mb-10">
                 <input
@@ -410,12 +407,10 @@ const Home = () => {
           </div>
           <div className="relative py-10 px-5 sm:px-10">
             <div className="boldText text-4xl sm:text-5xl text-[#fff] font-bold mb-5">
-              Find Your <span className="block">Perfect Space</span>
+              Experience Stays<span className="block">That Feel Like Home</span>
             </div>
             <div className="text-sm max-w-[400px] text-[#fff]">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptatem temporibus minus itaque! Amet autem accusantium
-              pariatur labore cumque architecto ut.
+              Bilton Hotel, Bangalore offers comfort, care, and warm hospitality—just like home. Nestled in the heart of the city, it’s the perfect place to relax and refresh while enjoying the vibrant charm of Bangalore. Every stay with us is designed to make you feel at ease, turning the city into your preferred home away from home.
             </div>
           </div>
         </div>
@@ -575,7 +570,7 @@ const Home = () => {
           <div className="md:flex px-2 justify-center md:justify-between items-center w-full md:px-20">
             <div>
               <div className="text-5xl md:text-6xl boldText relative z-20 md:px-10 font-bold text-[#fff] mb-5">
-                Follow Our <span className="block">Bilton</span>
+                Explore <span className="block">Bilton</span>
               </div>
               <div className="relative w-[300px]">
                 <img
@@ -586,9 +581,9 @@ const Home = () => {
               </div>
             </div>
             <div className="relative z-20 text-lg md:text-2xl font-semibold text-[#fff]">
-              If you appreciate this shot !{" "}
+              Unwind in comfort, enjoy delicious moments, and feel truly at home.
               <span className="block">
-                Please follow our Bilton Luxury Hotel
+                
               </span>{" "}
             </div>
           </div>
