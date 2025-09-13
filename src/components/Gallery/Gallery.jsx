@@ -3,7 +3,6 @@ import CurvedSlider from "../Gallery/CurvedSlider";
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("images");
-
   // Replace these URLs with your actual Cloudinary / remote image URLs.
   const images = [
     "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564115/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_smieew.jpg",
@@ -45,7 +44,7 @@ const Gallery = () => {
     <div className="pt-[150px] overflow-hidden">
       <section className="md:mb-10 px-2 lg:px-0">
         <div className="text-center text-4xl lg:text-6xl boldText font-semibold leading-tight">
-          Experience Luxury, Redefined <span className="block">Your Perfect Stay Awaits</span>
+          Where Luxury Meets Comfort <span className="block">for an Unforgettable Stay</span>
         </div>
         <div>
           <CurvedSlider />
@@ -56,12 +55,10 @@ const Gallery = () => {
         <div className="max-w-[1400px] mx-auto mb-10 px-2">
           <div className="md:flex px-2 md:px-0 justify-between w-full gap-5 items-start mb-10">
             <div className="text-5xl boldText font-bold leading-tight w-full md:w-[60%]">
-              Lorem, ipsum dolor Lorem <span className="block">ipsum dolor</span>
+             A Glimpse of  <span className="block">Comfort & Luxury</span>
             </div>
             <div className="w-full md:w-[40%]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur in
-              sequi doloremque temporibus adipisci. Labore laboriosam ex, delectus cum,
-              consequuntur nisi tenetur est nemo in dolor hic sequi mollitia aliquid.
+              Step inside and explore the perfect blend of modern elegance and homely comfort. Our gallery showcases thoughtfully designed rooms, inviting dining spaces, and welcoming amenities—all crafted to make every stay memorable. Discover the atmosphere where luxury meets warmth, and envision your next unforgettable stay with us.
             </div>
           </div>
 

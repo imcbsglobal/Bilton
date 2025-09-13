@@ -212,13 +212,10 @@ const About = () => {
                 About Bilton
               </div>
               <div className="mb-5 text-3xl md:text-5xl boldText font-bold text-[#06362E]">
-                Redefining stays with effortless guest experiences
+                The Perfect Ambiance for Memorable Stays
               </div>
               <div className="text-xs md:text-sm mb-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt dolor voluptas recusandae quos perferendis voluptatem
-                est omnis, reprehenderit, fugiat tenetur rerum necessitatibus
-                molestias architecto libero iure. Ut iste doloribus ad.
+                Relax and unwind in a space designed for effortless comfort. With modern facilities, cozy rooms, and attentive service, every stay is made special. Enjoy a memorable experience where convenience meets warmth, and every visit feels like coming home.
               </div>
               <div className="flex items-center gap-5">
                 <div className="px-6 py-2 border border-[#06362E] text-[#E2C686] bg-[#06362E] text-sm font-semibold rounded-full">
@@ -333,8 +330,8 @@ const About = () => {
             />
           </div>
           <div className="relative text-[#fff] text-4xl font-semibold boldText text-center px-10">
-            Lorem ipsum dolor sit amet consectetur{" "}
-            <span className="block">adipisicing elit</span>
+            Seamless Comfort,{" "}
+            <span className="block"> Memorable Stays</span>
           </div>
           <div className=" relative mt-5">
             <div className="flex items-center gap-5 px-10 py-3 rounded-full bg-[#fcdf9c] text-[#06362E] font-semibold">
