@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import CurvedSlider from "../Gallery/CurvedSlider";
+import video1 from "../../assets/video1.mp4";
+import video2 from "../../assets/video2.mp4";
+import video3 from "../../assets/video3.mp4";
+
+
 
 const Gallery = () => {
   const [activeFilter, setActiveFilter] = useState("images");
@@ -22,23 +27,21 @@ const Gallery = () => {
     "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564104/WhatsApp_Image_2025-09-11_at_9.31.51_AM_1_akvwbt.jpg" // example — replace
   ];
 
-  const videos = [
-    {
-      src: "https://www.w3schools.com/html/mov_bbb.mp4",
-      poster:
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      src: "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
-      poster:
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      src: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4",
-      poster:
-        "https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-    }
-  ];
+const videos = [
+  {
+    src: video1,
+    poster: "https://res.cloudinary.com/dvxrou1vc/image/upload/v1758084977/bilton_og1uxy.png"
+  },
+  {
+    src: video2,
+    poster: "https://res.cloudinary.com/dvxrou1vc/image/upload/v1758084977/bilton_og1uxy.png"
+  },
+  {
+    src: video3,
+    poster: "https://res.cloudinary.com/dvxrou1vc/image/upload/v1758084977/bilton_og1uxy.png"
+  }
+];
+
 
   return (
     <div className="pt-[150px] overflow-hidden">

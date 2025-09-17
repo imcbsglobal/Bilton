@@ -1,7 +1,7 @@
 // src/pages/Home.jsx
 import React, { useRef, useState } from 'react'
 import homeVideo from "../../assets/BILTON_BANNER.mp4";
-import homeVideo2 from "../../assets/BILTON_BANNER2.mp4";
+import video1 from "../../assets/video1.mp4";
 import { FiSearch } from 'react-icons/fi';
 import { FaArrowRight } from 'react-icons/fa6';
 import demo from "../../assets/bannerbg.png"
@@ -367,7 +367,7 @@ const Home = () => {
             <div className="md:w-[60%] h-full">
               <div className="h-[580px] w-full bg-[#000] relative rounded-3xl overflow-hidden">
                 <div className="absolute top-0 bottom-0 left-0 right-0">
-                  <video src={homeVideo2} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+                  <video src={video1} autoPlay loop muted playsInline className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute inset-0 bg-[#00000030]"></div>
                 <div className="flex px-10 absolute bottom-10">
