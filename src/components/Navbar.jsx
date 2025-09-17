@@ -29,10 +29,18 @@ const Navbar = () => {
           showSmallHeader ? "opacity-0 pointer-events-none" : "opacity-100"
         }`}
       >
-        {/* Logo */}
-        <div className="w-[130px]">
-          <img src={logo} alt="Logo" className="w-full h-full object-contain" />
+        {/* Logo - MATCHING SHADed PILL AS MENU */}
+        <div className="px-4 py-1.5 rounded-3xl bg-[#ffecbe] flex items-center justify-center">
+          {/* Increase width so logo fits nicely */}
+          <div className="w-[150px]">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-full h-full object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+            />
+          </div>
         </div>
+
         {/* Menus */}
         <nav className="hidden lg:flex">
           <ul className="flex justify-center items-center text-[#06362E] gap-5">
@@ -86,49 +94,56 @@ const Navbar = () => {
       </header>
 
       {/* Second Small Header */}
-     <header
-  className={`fixed top-0 left-0 right-0 py-5 flex justify-between items-center px-10 z-[998] 
+      <header
+        className={`fixed top-0 left-0 right-0 py-5 flex justify-between items-center px-10 z-[998] 
 shadow-[0_3px_10px_rgb(0,0,0,0.2)] bg-[#ffecbe] rounded-none transition-all duration-500 ${
   showSmallHeader ? "opacity-100" : "opacity-0 pointer-events-none"
 }`}
->
-  <div className="w-[100px]">
-    <img src={logo} alt="Logo" className="w-full h-full object-contain" />
-  </div>
+      >
+        {/* small header logo with same shade */}
+        <div className="px-3 py-1 rounded-3xl bg-[#ffecbe] flex items-center justify-center">
+          <div className="w-[100px]">
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-full h-full object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+            />
+          </div>
+        </div>
 
-  <nav className="hidden lg:flex">
-    <ul className="flex justify-center items-center text-[#06362E] gap-5">
-      <a href="/">
-        <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Home</li>
-      </a>
-      <a href="/about">
-        <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">About</li>
-      </a>
-      <a href="/gallery">
-        <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Gallery</li>
-      </a>
-      <a href="/room">
-        <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Room</li>
-      </a>
-      <a href="/contact">
-        <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Contact Us</li>
-      </a>
-    </ul>
-  </nav>
+        <nav className="hidden lg:flex">
+          <ul className="flex justify-center items-center text-[#06362E] gap-5">
+            <a href="/">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Home</li>
+            </a>
+            <a href="/about">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">About</li>
+            </a>
+            <a href="/gallery">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Gallery</li>
+            </a>
+            <a href="/room">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Room</li>
+            </a>
+            <a href="/contact">
+              <li className="font-medium px-4 py-1.5 rounded-3xl bg-[#ffecbe]">Contact Us</li>
+            </a>
+          </ul>
+        </nav>
 
-  {/* Contact Details */}
-  <div className="hidden lg:flex flex-col text-[#06362E] text-sm mr-5">
-    <span>Email: info@biltonhotel.com</span>
-    <span>Phone: +91 88844 11190</span>
-  </div>
+        {/* Contact Details */}
+        <div className="hidden lg:flex flex-col text-[#06362E] text-sm mr-5">
+          <span>Email: info@biltonhotel.com</span>
+          <span>Phone: +91 88844 11190</span>
+        </div>
 
-  <div
-    className="lg:hidden text-[#06362E] text-2xl"
-    onClick={() => setOpenMenu(!openMenu)}
-  >
-    <RiMenu3Line />
-  </div>
-</header>
+        <div
+          className="lg:hidden text-[#06362E] text-2xl"
+          onClick={() => setOpenMenu(!openMenu)}
+        >
+          <RiMenu3Line />
+        </div>
+      </header>
 
 
       {/* Mobile Navbar */}

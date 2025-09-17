@@ -32,7 +32,7 @@ function AppContent() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/roomDetail" element={<RoomDetails />} />
+       <Route path="/roomDetail/:id" element={<RoomDetails />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/CheckBookingConfirmation" element={<CheckBookingConfirmation />} />
         <Route path="/payment" element={<Payment />} />
