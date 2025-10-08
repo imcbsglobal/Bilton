@@ -9,6 +9,9 @@ import { PiBathtub } from "react-icons/pi";
 import { ImSpoonKnife } from "react-icons/im";
 import { SlSizeFullscreen } from "react-icons/sl";
 import { BsCheck2 } from "react-icons/bs";
+import delux1 from "../../assets/rooms/delux1.jpg";
+import delux2 from "../../assets/rooms/delux2.jpg";
+
 
 const RoomDetails = () => {
   const location = useLocation();
@@ -24,6 +27,10 @@ const RoomDetails = () => {
   // id param (could be name or id depending on route)
   const roomIdFromParam = params?.id || params?.name || null;
 
+  // Debugging logs
+  console.log('Room from state:', roomFromState);
+  console.log('Room from param:', roomIdFromParam);
+
   // fallbackRooms: used only if no state provided
   const fallbackRooms = [
     {
@@ -37,60 +44,60 @@ const RoomDetails = () => {
       visitors: 320,
       room: "1 extra-large double bed",
       price: 199,
-      shortDesc: "Cozy room with essential comforts."
+      shortDesc: "Cozy room with essential comforts.",
     },
     {
       id: "deluxe",
       name: "Deluxe",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565475/WhatsApp_Image_2025-09-11_at_9.59.50_AM_sshsdz.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565476/deluxe_balcony.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565477/deluxe_bath.jpg"
+        delux1,
+        delux2
       ],
       visitors: 420,
       room: "1 extra-large double bed + balcony",
       price: 249,
-      shortDesc: "Spacious room with city views."
+      shortDesc: "Spacious room with city views.",
     },
     {
       id: "executive",
       name: "Executive",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564101/WhatsApp_Image_2025-09-11_at_9.31.52_AM_qkk2a4.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564102/executive_desk.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564103/executive_bath.jpg"
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564112/WhatsApp_Image_2025-09-11_at_9.31.51_AM_zbtrhi.jpg"
       ],
       visitors: 220,
       room: "1 king-size bed",
       price: 299,
-      shortDesc: "Premium amenities for business travelers."
+      shortDesc: "Premium amenities for business travelers.",
     },
     {
       id: "executive-triple",
       name: "Executive Triple",
       images: [
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564104/exectriple_main.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564105/exectriple_beds.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564106/exectriple_view.jpg"
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564104/WhatsApp_Image_2025-09-11_at_9.31.51_AM_1_akvwbt.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564115/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_smieew.jpg"
       ],
       visitors: 150,
       room: "3 single beds",
       price: 349,
-      shortDesc: "Extra space for groups and families."
+      shortDesc: "Extra space for groups and families.",
     },
     {
       id: "studio",
       name: "Studio",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564110/studio_kitchen.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564111/studio_balcony.jpg"
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565434/WhatsApp_Image_2025-09-11_at_9.51.46_AM_tcdrsm.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565433/WhatsApp_Image_2025-09-11_at_9.50.24_AM_cfx0c5.jpg"
       ],
       visitors: 180,
       room: "Studio layout with kitchenette",
       price: 329,
-      shortDesc: "Open-plan room with kitchenette."
-    }
+      shortDesc: "Open-plan room with kitchenette.",
+    },
   ];
 
   // Decide which room to display:
@@ -106,6 +113,8 @@ const RoomDetails = () => {
     );
     if (found) room = found;
   }
+
+  console.log('Final room data:', room);
 
   if (!room) {
     return (
@@ -211,7 +220,7 @@ const RoomDetails = () => {
               </div>
 
               <div className="max-w-[900px] text-[#06362E]">
-                {room.shortDesc || "A comfortable stay with excellent amenities."}
+                {room.shortDesc || "A comfortable stay with essential comforts."}
                 <div className="mt-3 text-sm text-gray-600">
                   <strong>Bed:</strong> {room.room || "—"}<br/>
                   <strong>Visitors:</strong> {room.visitors || "—"}

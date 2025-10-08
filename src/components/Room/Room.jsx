@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import { HiStar } from "react-icons/hi";
 import { TbUsers } from "react-icons/tb";
+import delux1 from "../../assets/rooms/delux1.jpg";
+import delux2 from "../../assets/rooms/delux2.jpg";
 
 const Room = () => {
   const [roomType] = useState("Luxury Suite");
@@ -58,8 +60,8 @@ const Room = () => {
       name: "Deluxe",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565475/WhatsApp_Image_2025-09-11_at_9.59.50_AM_sshsdz.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565476/deluxe_balcony.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565477/deluxe_bath.jpg"
+        delux1,
+        delux2
       ],
       visitors: 420,
       room: "1 extra-large double bed + balcony",
@@ -96,8 +98,8 @@ const Room = () => {
       name: "Executive",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564101/WhatsApp_Image_2025-09-11_at_9.31.52_AM_qkk2a4.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564102/executive_desk.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564103/executive_bath.jpg"
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564112/WhatsApp_Image_2025-09-11_at_9.31.51_AM_zbtrhi.jpg"
       ],
       visitors: 220,
       room: "1 king-size bed",
@@ -139,8 +141,8 @@ const Room = () => {
       name: "Executive Triple",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564104/WhatsApp_Image_2025-09-11_at_9.31.51_AM_1_akvwbt.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564105/exectriple_beds.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564106/exectriple_view.jpg"
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564115/WhatsApp_Image_2025-09-11_at_9.31.53_AM_1_smieew.jpg"
       ],
       visitors: 150,
       room: "3 single beds",
@@ -181,8 +183,8 @@ const Room = () => {
       name: "Studio",
       images: [
         "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564109/WhatsApp_Image_2025-09-11_at_9.31.50_AM_2_egjoxa.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564110/studio_kitchen.jpg",
-        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757564111/studio_balcony.jpg"
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565434/WhatsApp_Image_2025-09-11_at_9.51.46_AM_tcdrsm.jpg",
+        "https://res.cloudinary.com/dtouoqusd/image/upload/v1757565433/WhatsApp_Image_2025-09-11_at_9.50.24_AM_cfx0c5.jpg"
       ],
       visitors: 180,
       room: "Studio layout with kitchenette",
@@ -228,7 +230,9 @@ const Room = () => {
   ];
 
   const handleNavigate = (room) => {
-    navigate(`/roomDetail/${room.id}`, { state: room });
+    navigate(`/roomDetail/${room.id}`, { 
+      state: room,
+    });
   };
 
   return (
