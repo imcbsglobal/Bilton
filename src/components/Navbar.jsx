@@ -73,7 +73,7 @@ const Navbar = () => {
         </nav>
         {/* Login */}
         <div className="items-center gap-5 hidden lg:flex">
-          <a href="/roomDetail">
+          <a href="#">
             <button className="px-8 py-2 rounded-full cursor-pointer bg-[#06362E] font-semibold text-[#E2C686]">
               Book Room
             </button>

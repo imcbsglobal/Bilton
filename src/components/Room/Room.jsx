@@ -254,7 +254,7 @@ const Room = () => {
             <div className="relative w-full max-w-6xl mx-auto mb-10">
               <div className="rounded-3xl overflow-hidden shadow-2xl border border-amber-200 h-80 md:h-96 lg:h-[500px]">
                 <img
-                  src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/44b75684118919.5d52806ed0805.jpg"
+                  src="https://res.cloudinary.com/dtouoqusd/image/upload/v1757564097/WhatsApp_Image_2025-09-11_at_9.31.49_AM_yqzzir.jpg"
                   alt="Luxury hotel suite with panoramic view"
                   className="w-full h-full object-cover transform transition duration-700 hover:scale-105"
                 />

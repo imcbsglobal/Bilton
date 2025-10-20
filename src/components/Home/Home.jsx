@@ -42,7 +42,7 @@ const categories = [
     ],
     visitors: 320,
     room: "1 extra-large double bed",
-    price: 199,
+    price: 1999,
     shortDesc: "Cozy room with essential comforts.",
     path: "/roomDetail"
   },
@@ -57,7 +57,7 @@ const categories = [
     ],
     visitors: 420,
     room: "1 extra-large double bed + balcony",
-    price: 249,
+    price: 2499,
     shortDesc: "Spacious room with city views.",
     path: "/roomDetail"
   },
@@ -72,7 +72,7 @@ const categories = [
     ],
     visitors: 220,
     room: "1 king-size bed",
-    price: 299,
+    price: 2999,
     shortDesc: "Premium amenities for business travelers.",
     path: "/roomDetail"
   },
@@ -87,7 +87,7 @@ const categories = [
     ],
     visitors: 150,
     room: "3 single beds",
-    price: 349,
+    price: 3499,
     shortDesc: "Extra space for groups and families.",
     path: "/roomDetail"
   },
@@ -102,7 +102,7 @@ const categories = [
     ],
     visitors: 180,
     room: "Studio layout with kitchenette",
-    price: 329,
+    price: 3299,
     shortDesc: "Open-plan room with kitchenette.",
     path: "/roomDetail"
   }
@@ -249,7 +249,7 @@ const Home = () => {
             {/* Right */}
             <div className="md:w-[30%] px-2 md:px-0">
               <div className="mb-10">
-                Bilton Hotel offers clean and comfortable rooms designed for a relaxing stay. Guests can enjoy delicious dining options with a variety of cuisines prepared fresh daily. The hotel provides excellent hospitality with friendly staff to assist at any time. With well-maintained interiors and quality service, Bilton Hotel ensures a pleasant and memorable experience for every guest.
+                Bilton Hotel offers clean and comfortable rooms designed for a relaxing stay near NIMHANS Hospital and the NIMHANS Convention Center in Bangalore. Ideal for guests visiting the hospital or attending conferences, our hotel provides convenient access and a peaceful atmosphere. Guests can enjoy delicious dining options with a variety of cuisines prepared fresh daily. With friendly staff, excellent hospitality, and well-maintained interiors, Bilton Hotel ensures a pleasant and memorable experience for every guest.
               </div>
 
               <div className="flex items-center gap-5 mb-10">
@@ -328,7 +328,7 @@ const Home = () => {
               <div>
                 <div className="text-3xl font-bold mb-3">{selectedCategory.label}</div>
                 <div className="text-sm text-[#fff3d7] mb-6">
-                  Explore our {selectedCategory.label.toLowerCase()} — carefully curated for comfort and style. Click to view {selectedCategory.label.toLowerCase()} options and details.
+                  Explore our {selectedCategory.label.toLowerCase()} — carefully curated for comfort and style. Click to view {selectedCategory.label.toLowerCase()} options and details.Bilton Hotel offers clean and comfortable rooms designed for a relaxing stay. Guests can enjoy delicious dining options with a variety of cuisines prepared fresh daily. The hotel provides excellent hospitality with friendly staff to assist at any time. With well-maintained interiors and quality service, Bilton Hotel ensures a pleasant and memorable experience for every guest.offers comfort, care, and warm hospitality—just like home. Nestled in the heart of the city, it’s the perfect place to relax and refresh while enjoying the vibrant charm of Bangalore. Every stay with us is designed to make you feel at ease, turning the city into your preferred home away from home.
                 </div>
               </div>
 
@@ -336,7 +336,7 @@ const Home = () => {
                 <button onClick={() => goToCategory(selectedCategory)} className="px-6 py-3 rounded-full bg-[#E2C686] text-[#06362E] font-semibold">
                   View {selectedCategory.label}
                 </button>
-                <div className="text-sm opacity-80">Or click the image to open</div>
+                <div className="text-sm opacity-80"></div>
               </div>
             </div>
           </div>
